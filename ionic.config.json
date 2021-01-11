@@ -1,0 +1,7 @@
+{
+  "name": "App-Alergenios",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "react"
+}
