@@ -1,23 +1,22 @@
-.toolBar {
-    display: flex;
+.toolbarGridContainer {
+    display: grid;
+    grid-template-columns: 20% auto 20%;
 }
 
-.toolBarTitle {
+.toolbarTitle {
     text-align: center;
-    padding-left: 20%;
 }
 
-.userBar {
-    padding-right: 5%;
+.toolbarGridCol {
     text-align: center;
-    margin: 3% 0;
     color: var(--rita-color-dark-green);
+    margin: auto;
 }
 
-.userBarIcon {
+.userToolbarIcon {
     font-size: 170%;
 }
 
-.userBarText {
+.userToolbarText {
     margin: 0;
 }

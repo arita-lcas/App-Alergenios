@@ -9,11 +9,15 @@ const Tab5: React.FC = () => {
     <IonPage>
       <IonHeader>
         <IonToolbar>
-          <div className="toolBar">
-            <IonTitle className="toolBarTitle">Listas de compras</IonTitle>
-            <div className="userBar">
-              <IonIcon icon={personCircleOutline} className="userBarIcon" />
-              <p className="userBarText">Marta</p>
+          <div className="toolbarGridContainer">
+            <div></div>
+            <div className="toolbarGridCol">
+              <IonTitle className="toolbarTitle">Listas de compras</IonTitle>
+            </div>
+            <div className="toolbarGridCol">
+              <IonIcon icon={personCircleOutline} className="userToolbarIcon" />
+              <br />
+              <span className="userToolbarText">Marta</span>
             </div>
           </div>
           
