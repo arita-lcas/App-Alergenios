@@ -2,6 +2,13 @@
     --background: var(--rita-color-dark-green);
 }
 
+.menuButton {
+    --color: var(--rita-color-menu-inactive);
+    --color-selected: var(--rita-color-background);
+    --padding-start: 8%;
+    --padding-end: 8%;
+}
+
 
 
 
