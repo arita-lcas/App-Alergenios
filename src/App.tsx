@@ -52,23 +52,23 @@ const App: React.FC = () => (
         <IonTabBar slot="bottom" className="tabBar">
           <IonTabButton tab="tab1" href="/tab1">
             <IonIcon icon={triangle} />
-            <IonLabel>Tab 1</IonLabel>
+            <IonLabel>Sugestões</IonLabel>
           </IonTabButton>
           <IonTabButton tab="tab2" href="/tab2">
             <IonIcon icon={ellipse} />
-            <IonLabel>Tab 2</IonLabel>
+            <IonLabel>Adicionar</IonLabel>
           </IonTabButton>
           <IonTabButton tab="tab3" href="/tab3">
             <IonIcon icon={square} />
-            <IonLabel>Tab 3</IonLabel>
+            <IonLabel>Pesquisa</IonLabel>
           </IonTabButton>
           <IonTabButton tab="tab4" href="/tab4">
             <IonIcon icon={square} />
-            <IonLabel>Tab 4</IonLabel>
+            <IonLabel>Favoritos</IonLabel>
           </IonTabButton>
           <IonTabButton tab="tab5" href="/tab5">
             <IonIcon icon={square} />
-            <IonLabel>Tab 5</IonLabel>
+            <IonLabel>Compras</IonLabel>
           </IonTabButton>
         </IonTabBar>
       </IonTabs>
