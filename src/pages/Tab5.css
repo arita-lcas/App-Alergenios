@@ -1,0 +1,23 @@
+.toolBar {
+    display: flex;
+}
+
+.toolBarTitle {
+    text-align: center;
+    padding-left: 20%;
+}
+
+.userBar {
+    padding-right: 5%;
+    text-align: center;
+    margin: 3% 0;
+    color: var(--rita-color-dark-green);
+}
+
+.userBarIcon {
+    font-size: 170%;
+}
+
+.userBarText {
+    margin: 0;
+}

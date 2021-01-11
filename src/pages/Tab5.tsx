@@ -1,14 +1,22 @@
 import React from 'react';
-import { IonContent, IonHeader, IonPage, IonTitle, IonToolbar } from '@ionic/react';
+import { IonContent, IonHeader, IonPage, IonTitle, IonToolbar, IonIcon } from '@ionic/react';
 import ExploreContainer from '../components/ExploreContainer';
 import './Tab5.css';
+import { personCircleOutline } from 'ionicons/icons';
 
 const Tab5: React.FC = () => {
   return (
     <IonPage>
       <IonHeader>
         <IonToolbar>
-          <IonTitle>Listas de compras</IonTitle>
+          <div className="toolBar">
+            <IonTitle className="toolBarTitle">Listas de compras</IonTitle>
+            <div className="userBar">
+              <IonIcon icon={personCircleOutline} className="userBarIcon" />
+              <p className="userBarText">Marta</p>
+            </div>
+          </div>
+          
         </IonToolbar>
       </IonHeader>
       <IonContent fullscreen>
