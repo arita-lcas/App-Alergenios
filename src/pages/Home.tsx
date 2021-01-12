@@ -10,9 +10,9 @@ const Home: React.FC = () => {
     <IonPage>
       <IonHeader>
         <AlergHeader 
-          headerLeft={<IonIcon icon={personCircleOutline} className='headerUserIcon' />} 
+          headerLeft={""} 
           headerTitle={""} 
-          headerRight={<span className="headerUserText">Marta</span>} />
+          headerRight={"headerUser"} />
       </IonHeader>
       <IonContent fullscreen className="content1">
         <IonHeader collapse="condense">

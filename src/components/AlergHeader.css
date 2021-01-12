@@ -25,3 +25,8 @@
 .headerUserText {
     margin: 0;
 }
+
+.headerSearch {
+    display: flex;
+    align-items: center;
+}

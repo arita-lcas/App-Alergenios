@@ -8,7 +8,10 @@ const Search: React.FC = () => {
   return (
     <IonPage>
       <IonHeader>
-        <AlergHeader headerLeft={""} headerTitle={""} headerRight={""} />
+        <AlergHeader 
+          headerLeft={""} 
+          headerTitle={"headerSearch"} 
+          headerRight={""} />
       </IonHeader>
       <IonContent fullscreen>
         <IonHeader collapse="condense">

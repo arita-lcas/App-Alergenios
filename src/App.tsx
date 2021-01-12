@@ -64,11 +64,11 @@ const App: React.FC = () => (
           </IonTabButton>
           <IonTabButton tab="tab4" href="/tab4" className="menuButton">
             <IonIcon icon={starOutline} />
-            <IonLabel>Favoritos</IonLabel>
+            <IonLabel id="favoritesId">Favoritos</IonLabel>
           </IonTabButton>
           <IonTabButton tab="tab5" href="/tab5" className="menuButton">
             <IonIcon icon={cartOutline} />
-            <IonLabel>Compras</IonLabel>
+            <IonLabel id="shoppingId">Compras</IonLabel>
           </IonTabButton>
         </IonTabBar>
       </IonTabs>

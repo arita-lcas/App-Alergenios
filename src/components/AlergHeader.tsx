@@ -1,24 +1,63 @@
 import React from 'react';
 import { IonToolbar, IonTitle, IonIcon } from '@ionic/react';
-import { personCircleOutline } from 'ionicons/icons';
+import { personCircleOutline, arrowBackOutline, pencilOutline, searchOutline } from 'ionicons/icons';
 import './AlergHeader.css';
 
-const AlergHeader: React.FC<{ headerLeft: unknown; headerTitle: string; headerRight: unknown }> = props => {
+
+const AlergHeader: React.FC<{ headerLeft: unknown; headerTitle: string; headerRight: string }> = props => {
     return (
         <IonToolbar className="headerToolbar">
           <div className="headerGridContainer">
-            <div></div>
+            
             <div className="headerGridCol">
-              <IonTitle className="headerTitle">{props.headerTitle}</IonTitle>
+              {props.headerLeft === "headerReturn"
+                ? <div>
+                    <IonIcon icon={arrowBackOutline} className='headerUserIcon' />
+                  </div>
+                : <div></div>
+              }
             </div>
+
             <div className="headerGridCol">
-              {props.headerLeft}
-              <br />
-              {props.headerRight}
+              {props.headerTitle === "headerSearch"
+                ? <div className="headerSearch">
+                    <IonIcon icon={searchOutline} />
+                    <IonTitle className="headerTitle">Pesquisa</IonTitle>
+                  </div>
+                : <div>
+                    <IonTitle className="headerTitle">{props.headerTitle}</IonTitle>
+                  </div>
+              }
             </div>
+
+            <div className="headerGridCol"> 
+              {props.headerRight === "headerUser" 
+                ? <div >
+                    <IonIcon icon={personCircleOutline} className='headerUserIcon' />
+                    <br />
+                    <span className="headerUserText">Marta</span>
+                  </div>
+                : <div> 
+                  {props.headerRight === "headerEdit" 
+                    ? <div>
+                        <IonIcon icon={pencilOutline} className='headerUserIcon' />
+                      </div>
+                    : <div></div>
+                  }
+                </div>
+              }
+            </div>
+
           </div>
         </IonToolbar>
     );
 };
 
 export default AlergHeader;
+
+
+
+
+/* <IonIcon icon={personCircleOutline} className='headerUserIcon' />
+<br />
+<span className="headerUserText">Marta</span> */

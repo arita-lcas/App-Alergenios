@@ -10,7 +10,7 @@ const AddProduct: React.FC = () => {
     <IonPage>
       <IonHeader>
         <AlergHeader 
-          headerLeft={<IonIcon icon={arrowBackOutline} />} 
+          headerLeft={"headerReturn"} 
           headerTitle={""} 
           headerRight={""} />
       </IonHeader>
