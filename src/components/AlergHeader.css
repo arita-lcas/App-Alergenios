@@ -1,0 +1,27 @@
+.headerToolbar {
+    --background: var(--alerg-color-background);
+}
+
+.headerGridContainer {
+    display: grid;
+    grid-template-columns: 20% auto 20%;
+    
+}
+
+.headerTitle {
+    text-align: center;
+}
+
+.headerGridCol {
+    text-align: center;
+    color: var(--alerg-color-dark-green);
+    margin: auto;
+}
+
+.headerUserIcon {
+    font-size: 170%;
+}
+
+.headerUserText {
+    margin: 0;
+}

@@ -1,15 +1,14 @@
 import React from 'react';
 import { IonContent, IonHeader, IonPage, IonTitle, IonToolbar } from '@ionic/react';
 import ExploreContainer from '../components/ExploreContainer';
+import AlergHeader from '../components/AlergHeader';
 import './Search.css';
 
 const Search: React.FC = () => {
   return (
     <IonPage>
       <IonHeader>
-        <IonToolbar>
-          <IonTitle>Pesquisa</IonTitle>
-        </IonToolbar>
+        <AlergHeader headerTitle={""} />
       </IonHeader>
       <IonContent fullscreen>
         <IonHeader collapse="condense">

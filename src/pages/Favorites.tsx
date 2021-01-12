@@ -1,15 +1,14 @@
 import React from 'react';
 import { IonContent, IonHeader, IonPage, IonTitle, IonToolbar } from '@ionic/react';
 import ExploreContainer from '../components/ExploreContainer';
+import AlergHeader from '../components/AlergHeader';
 import './Favorites.css';
 
 const Favorites: React.FC = () => {
   return (
     <IonPage>
       <IonHeader>
-        <IonToolbar>
-          <IonTitle>Listas de favoritos</IonTitle>
-        </IonToolbar>
+        <AlergHeader headerTitle={"Listas de favoritos"} />
       </IonHeader>
       <IonContent fullscreen>
         <IonHeader collapse="condense">

@@ -5,14 +5,14 @@ http://ionicframework.com/docs/theming/ */
 :root {
 
   /** my colors **/
-  --rita-color-background: #fcfbf7;
-  --rita-color-product-bg: #ffffff;
-  --rita-color-dark-green: #608780;
-  --rita-color-medium-green: #6ba395;
-  --rita-color-light-green: #bacfc2;
-  --rita-color-menu-inactive: rgba(186,207,194,.7);
-  --rita-color-orange: #e59560;
-  --rita-color-red: cc5752;
+  --alerg-color-background: #fcfbf7;
+  --alerg-color-product-bg: #ffffff;
+  --alerg-color-dark-green: #608780;
+  --alerg-color-medium-green: #6ba395;
+  --alerg-color-light-green: #bacfc2;
+  --alerg-color-menu-inactive: rgba(186,207,194,.7);
+  --alerg-color-orange: #e59560;
+  --alerg-color-red: cc5752;
 
   /** primary **/
   --ion-color-primary: #3880ff;

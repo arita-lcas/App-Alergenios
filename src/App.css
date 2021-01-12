@@ -1,10 +1,10 @@
 .menuTabBar {
-    --background: var(--rita-color-dark-green);
+    --background: var(--alerg-color-dark-green);
 }
 
 .menuButton {
-    --color: var(--rita-color-menu-inactive);
-    --color-selected: var(--rita-color-background);
+    --color: var(--alerg-color-menu-inactive);
+    --color-selected: var(--alerg-color-background);
     --padding-start: 8%;
     --padding-end: 8%;
 }

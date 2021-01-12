@@ -2,14 +2,13 @@ import React from 'react';
 import { IonContent, IonHeader, IonPage, IonTitle, IonToolbar } from '@ionic/react';
 import ExploreContainer from '../components/ExploreContainer';
 import './AddProduct.css';
+import AlergHeader from '../components/AlergHeader';
 
 const AddProduct: React.FC = () => {
   return (
     <IonPage>
       <IonHeader>
-        <IonToolbar>
-          <IonTitle>Adicionar novo produto</IonTitle>
-        </IonToolbar>
+        <AlergHeader headerTitle={""} />
       </IonHeader>
       <IonContent fullscreen>
         <IonHeader collapse="condense">
