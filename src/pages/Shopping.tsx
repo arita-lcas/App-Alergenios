@@ -1,10 +1,10 @@
 import React from 'react';
 import { IonContent, IonHeader, IonPage, IonTitle, IonToolbar, IonIcon } from '@ionic/react';
 import ExploreContainer from '../components/ExploreContainer';
-import './Tab5.css';
+import './Shopping.css';
 import { personCircleOutline } from 'ionicons/icons';
 
-const Tab5: React.FC = () => {
+const Shopping: React.FC = () => {
   return (
     <IonPage>
       <IonHeader>
@@ -35,4 +35,4 @@ const Tab5: React.FC = () => {
   );
 };
 
-export default Tab5;
+export default Shopping;
