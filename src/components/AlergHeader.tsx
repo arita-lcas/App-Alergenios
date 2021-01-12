@@ -3,7 +3,7 @@ import { IonToolbar, IonTitle, IonIcon } from '@ionic/react';
 import { personCircleOutline } from 'ionicons/icons';
 import './AlergHeader.css';
 
-const AlergHeader: React.FC<{ headerTitle: string }> = props => {
+const AlergHeader: React.FC<{ headerLeft: unknown; headerTitle: string; headerRight: unknown }> = props => {
     return (
         <IonToolbar className="headerToolbar">
           <div className="headerGridContainer">
@@ -12,9 +12,9 @@ const AlergHeader: React.FC<{ headerTitle: string }> = props => {
               <IonTitle className="headerTitle">{props.headerTitle}</IonTitle>
             </div>
             <div className="headerGridCol">
-              <IonIcon icon={personCircleOutline} className="headerUserIcon" />
+              {props.headerLeft}
               <br />
-              <span className="headerUserText">Marta</span>
+              {props.headerRight}
             </div>
           </div>
         </IonToolbar>

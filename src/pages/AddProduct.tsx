@@ -1,14 +1,18 @@
 import React from 'react';
-import { IonContent, IonHeader, IonPage, IonTitle, IonToolbar } from '@ionic/react';
+import { IonContent, IonHeader, IonPage, IonTitle, IonToolbar, IonIcon } from '@ionic/react';
 import ExploreContainer from '../components/ExploreContainer';
-import './AddProduct.css';
 import AlergHeader from '../components/AlergHeader';
+import { arrowBackOutline } from 'ionicons/icons'
+import './AddProduct.css';
 
 const AddProduct: React.FC = () => {
   return (
     <IonPage>
       <IonHeader>
-        <AlergHeader headerTitle={""} />
+        <AlergHeader 
+          headerLeft={<IonIcon icon={arrowBackOutline} />} 
+          headerTitle={""} 
+          headerRight={""} />
       </IonHeader>
       <IonContent fullscreen>
         <IonHeader collapse="condense">
