@@ -1,9 +1,5 @@
 import React from 'react';
 import { IonContent, IonHeader, IonPage, IonSlides, IonSlide } from '@ionic/react';
-import item1 from '../img/item-1.jpg';
-import item2 from '../img/item-2.jpg';
-import item3 from '../img/item-3.jpg';
-import item4 from '../img/item-4.jpg';
 import AlergHeader from '../components/AlergHeader';
 import AlergHomeGrid from '../components/AlergHomeGrid';
 import './Home.css';
@@ -12,25 +8,25 @@ import './Home.css';
 let homeProducts: { id: number, img: string, name: string, brand: string }[] = [
   {
     id: 1,
-    img: item1,
+    img: "/assets/img/item-1.jpg",
     name: "Yofu Soja Natural",
     brand: "Alpro"
   },
   {
     id: 2,
-    img: item2,
+    img: "/assets/img/item-2.jpg",
     name: "Chocolate de Leite",
     brand: "Toblerone"
   }, 
   {
     id: 3,
-    img: item3,
+    img: "/assets/img/item-3.jpg",
     name: "Bolachas de Laranja",
     brand: "Gullón"
   }, 
   {
     id: 4,
-    img: item4,
+    img: "/assets/img/item-4.jpg",
     name: "Bolachas Sharkies",
     brand: "Gullón"
   }
