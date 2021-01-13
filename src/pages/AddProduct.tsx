@@ -13,21 +13,7 @@ const AddProduct: React.FC = () => {
           headerRight={""} />
       </IonHeader>
       <IonContent slot="fixed" className="homeContent">
-        <div className="homeWrapper">
-          <h1>Sugestões</h1>
-          <div className="homeSlidesContainer">
-            <IonSlides pager className="homeSlidesContainer">
-              <IonSlide>
-                <div className="homeGridContainer">
-                  <div className="homeProducts"></div>
-                  <div className="homeProducts"></div>
-                  <div className="homeProducts"></div>
-                  <div className="homeProducts"></div>
-                </div>
-              </IonSlide>
-            </IonSlides>
-          </div>
-        </div>
+       
       </IonContent>
     </IonPage>
   );

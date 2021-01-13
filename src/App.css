@@ -1,3 +1,13 @@
+/*my text styles*/
+.alergTitle {
+    font-family: var(--alerg-font-family);
+    font-weight: 600;
+    font-size: 25px;
+    color: var(--alerg-color-dark-green);
+}
+
+
+
 .menuTabBar {
     --background: var(--alerg-color-dark-green);
 }
@@ -5,6 +15,7 @@
 .menuButton {
     --color: var(--alerg-color-menu-inactive);
     --color-selected: var(--alerg-color-background);
+    font-family: var(--alerg-font-family);
     --padding-start: 8%;
     --padding-end: 8%;
 }

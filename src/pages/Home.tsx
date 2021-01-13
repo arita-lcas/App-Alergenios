@@ -16,7 +16,7 @@ const Home: React.FC = () => {
       </IonHeader>
       <IonContent slot="fixed" className="homeContent">
         <div className="homeWrapper">
-          <h1>Sugestões</h1>
+          <h1 className="alergTitle">Sugestões</h1>
           <div className="homeSlidesContainer">
             <IonSlides pager={true} className="homeSlidesContainer">
               <IonSlide>

@@ -24,6 +24,7 @@
 
 .headerUserText {
     margin: 0;
+    font-family: var(--alerg-font-family);
 }
 
 .headerSearch {
