@@ -27,6 +27,22 @@
 }
 
 .headerSearch {
-    display: flex;
     align-items: center;
+}
+
+.headerSearchbar {
+    --box-shadow: none;
+    --background: none;
+    --color: var(--alerg-color-dark-green);
+    --icon-color: var(--alerg-color-dark-green);
+    --clear-button-color: var(--alerg-color-dark-green);
+}
+
+.searchLine {
+    border-bottom: 1.5px solid var(--alerg-color-dark-green);
+    margin: 0;
+    width: 65%;
+    position: relative;
+    top: -2.5vh;
+    left: 8vh;
 }

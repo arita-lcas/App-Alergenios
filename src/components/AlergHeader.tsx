@@ -1,5 +1,5 @@
 import React from 'react';
-import { IonToolbar, IonTitle, IonIcon } from '@ionic/react';
+import { IonToolbar, IonTitle, IonIcon, IonSearchbar } from '@ionic/react';
 import { personCircleOutline, arrowBackOutline, pencilOutline, searchOutline } from 'ionicons/icons';
 import './AlergHeader.css';
 
@@ -21,8 +21,8 @@ const AlergHeader: React.FC<{ headerLeft: unknown; headerTitle: string; headerRi
             <div className="headerGridCol">
               {props.headerTitle === "headerSearch"
                 ? <div className="headerSearch">
-                    <IonIcon icon={searchOutline} />
-                    <IonTitle className="headerTitle">Pesquisa</IonTitle>
+                    <IonSearchbar className="headerSearchbar" placeholder=""></IonSearchbar>
+                    <hr className="searchLine"></hr>
                   </div>
                 : <div>
                     <IonTitle className="headerTitle">{props.headerTitle}</IonTitle>
