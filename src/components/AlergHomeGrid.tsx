@@ -9,13 +9,13 @@ const AlergHomeGrid: React.FC<{ product: { id: number, img: string, name: string
                 <div className="homeProductImg"><IonImg src={process.env.PUBLIC_URL + props.product[0].img} /></div>
             </div>
             <div className="homeProducts">
-                <div className="homeProductImg"><img src={process.env.PUBLIC_URL + props.product[1].img} /></div>
+                <div className="homeProductImg"><IonImg src={process.env.PUBLIC_URL + props.product[1].img} /></div>
             </div>
             <div className="homeProducts">
-                <div className="homeProductImg"><img src={process.env.PUBLIC_URL + props.product[2].img} /></div>
+                <div className="homeProductImg"><IonImg src={process.env.PUBLIC_URL + props.product[2].img} /></div>
             </div>
             <div className="homeProducts">
-                <div className="homeProductImg"><img src={process.env.PUBLIC_URL + props.product[3].img} /></div>
+                <div className="homeProductImg"><IonImg src={process.env.PUBLIC_URL + props.product[3].img} /></div>
             </div>
         </div>
     );
