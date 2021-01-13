@@ -12,3 +12,10 @@
     grid-template-columns: auto auto;
     grid-gap: 3.5vw;
 }
+
+.homeProductImg {
+    padding-left: 11px;
+    padding-right: 11px;
+    padding-top: 11px;
+    padding-bottom: 7px;
+}
