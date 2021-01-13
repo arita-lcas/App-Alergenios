@@ -1,7 +1,22 @@
-.toolBar {
+.homeContent {
     --background: var(--alerg-color-background);
 }
 
-.content1 {
-    --background: var(--alerg-color-background);
+.homeSlidesContainer {
+    --bullet-background: var(--alerg-color-dark-green);
+    --bullet-background-active: var(--alerg-color-dark-green);
+}
+
+.homeProducts {
+    width: 39vw;
+    height: 25.7vh;
+    background-color: grey;
+}
+
+.homeWrapper {
+    display: grid;
+    height: 100%;
+    width: 100%;
+    text-align: center;
+    align-content: center;
 }
