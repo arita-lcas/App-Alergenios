@@ -1,6 +1,6 @@
 import React from 'react';
 import { IonToolbar, IonTitle, IonIcon, IonSearchbar } from '@ionic/react';
-import { personCircleOutline, arrowBackOutline, pencilOutline, searchOutline } from 'ionicons/icons';
+import { personCircleOutline, arrowBackOutline, pencilOutline } from 'ionicons/icons';
 import './AlergHeader.css';
 
 
@@ -57,7 +57,3 @@ export default AlergHeader;
 
 
 
-
-/* <IonIcon icon={personCircleOutline} className='headerUserIcon' />
-<br />
-<span className="headerUserText">Marta</span> */

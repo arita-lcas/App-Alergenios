@@ -1,0 +1,12 @@
+
+.homeProducts {
+    width: 39vw;
+    height: 25.7vh;
+    background-color: grey;
+}
+
+.homeGridContainer {
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-gap: 10px;
+}

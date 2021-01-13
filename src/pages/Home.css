@@ -5,18 +5,27 @@
 .homeSlidesContainer {
     --bullet-background: var(--alerg-color-dark-green);
     --bullet-background-active: var(--alerg-color-dark-green);
+    height: 64vh;
 }
 
-.homeProducts {
-    width: 39vw;
-    height: 25.7vh;
-    background-color: grey;
-}
-
-.homeWrapper {
+/*.homeWrapper {
     display: grid;
     height: 100%;
     width: 100%;
     text-align: center;
     align-content: center;
+}*/
+
+.homeWrapper {
+    text-align: center;
+    display: flow-root;
+    position: relative;
+    top: 6vh;
+}
+
+div.homeWrapper h1 {
+    position: relative;
+    top: 2vh;
+    margin: 0;
+    z-index: 2;
 }

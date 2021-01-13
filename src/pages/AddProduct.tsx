@@ -1,8 +1,6 @@
 import React from 'react';
-import { IonContent, IonHeader, IonPage, IonTitle, IonToolbar, IonIcon } from '@ionic/react';
-import ExploreContainer from '../components/ExploreContainer';
+import { IonContent, IonHeader, IonPage, IonSlides, IonSlide } from '@ionic/react';
 import AlergHeader from '../components/AlergHeader';
-import { arrowBackOutline } from 'ionicons/icons'
 import './AddProduct.css';
 
 const AddProduct: React.FC = () => {
@@ -14,13 +12,22 @@ const AddProduct: React.FC = () => {
           headerTitle={""} 
           headerRight={""} />
       </IonHeader>
-      <IonContent fullscreen>
-        <IonHeader collapse="condense">
-          <IonToolbar>
-            <IonTitle size="large">Tab 2</IonTitle>
-          </IonToolbar>
-        </IonHeader>
-        <ExploreContainer name="Tab 2 page" />
+      <IonContent slot="fixed" className="homeContent">
+        <div className="homeWrapper">
+          <h1>Sugestões</h1>
+          <div className="homeSlidesContainer">
+            <IonSlides pager className="homeSlidesContainer">
+              <IonSlide>
+                <div className="homeGridContainer">
+                  <div className="homeProducts"></div>
+                  <div className="homeProducts"></div>
+                  <div className="homeProducts"></div>
+                  <div className="homeProducts"></div>
+                </div>
+              </IonSlide>
+            </IonSlides>
+          </div>
+        </div>
       </IonContent>
     </IonPage>
   );
