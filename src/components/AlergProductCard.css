@@ -1,0 +1,41 @@
+.productCard {
+    width: 39vw;
+    height: 25.7vh;
+    background-color: white;
+    border: 1.5px solid var(--alerg-color-dark-green);
+    border-radius: 7px;
+}
+
+.productCardImg {
+    padding-left: 11px;
+    padding-right: 11px;
+    padding-top: 11px;
+    /*padding-bottom: 7px;*/
+}
+
+.productCardName {
+    font-family: var(--alerg-font-family);
+    color: var(--alerg-color-dark-green);
+    font-size: 12pt;
+    margin: 0;
+    padding-left: 11px;
+    text-align: left;
+}
+
+.productCardBrand {
+    font-family: var(--alerg-font-family);
+    color: var(--alerg-color-dark-green);
+    font-size: 10pt;
+    font-weight: 300;
+    margin: 0;
+    padding-left: 11px;
+    text-align: left;
+}
+
+.productContextMenu {
+    color: var(--alerg-color-dark-green);
+    font-size: 12pt;
+    position: relative;
+    top: -100%;
+    right: -45%;
+}

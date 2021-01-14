@@ -18,7 +18,7 @@ const AlergHeader: React.FC<{ headerLeft: unknown; headerTitle: string; headerRi
               }
             </div>
 
-            <div className="headerGridCol, alergTitle">
+            <div className="headerGridCol">
               {props.headerTitle === "headerSearch"
                 ? <div className="headerSearch">
                     <IonSearchbar className="headerSearchbar" placeholder=""></IonSearchbar>

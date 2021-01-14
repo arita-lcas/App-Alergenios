@@ -1,27 +1,18 @@
 import React from 'react';
-import { IonImg } from '@ionic/react';
 import './AlergHomeGrid.css';
+import AlergProductCard from '../components/AlergProductCard';
+import { attachProps } from '@ionic/react/dist/types/components/utils';
 
-const AlergHomeGrid: React.FC<{ product: { id: number, img: string, name: string, brand: string }[] }> = props => {
+const AlergHomeGrid: React.FC<{ productSlide: { id: number, img: string, name: string, brand: string }[] }> = props => {
     return (
         <div className="homeGridContainer">
-            <div className="homeProducts">
-                <div className="homeProductImg"><IonImg src={process.env.PUBLIC_URL + props.product[0].img} /></div>
-            </div>
-            <div className="homeProducts">
-                <div className="homeProductImg"><IonImg src={process.env.PUBLIC_URL + props.product[1].img} /></div>
-            </div>
-            <div className="homeProducts">
-                <div className="homeProductImg"><IonImg src={process.env.PUBLIC_URL + props.product[2].img} /></div>
-            </div>
-            <div className="homeProducts">
-                <div className="homeProductImg"><IonImg src={process.env.PUBLIC_URL + props.product[3].img} /></div>
-            </div>
+            <AlergProductCard product={props.productSlide[0]} />
+            <AlergProductCard product={props.productSlide[1]} />
+            <AlergProductCard product={props.productSlide[2]} />
+            <AlergProductCard product={props.productSlide[3]} />
         </div>
     );
 }
 
 export default AlergHomeGrid;
 
-
-/*<span>{props.product[0].name}</span>*/
