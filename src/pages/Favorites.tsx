@@ -14,7 +14,7 @@ const Favorites: React.FC = () => {
           headerTitle={"Listas de favoritos"} 
           headerRight={"headerUser"} />
       </IonHeader>
-      <IonContent fullscreen>
+      <IonContent fullscreen className="content">
         <IonHeader collapse="condense">
           <IonToolbar>
             <IonTitle size="large">Tab 3</IonTitle>

@@ -12,7 +12,7 @@ const AddProduct: React.FC = () => {
           headerTitle={""} 
           headerRight={""} />
       </IonHeader>
-      <IonContent slot="fixed" className="homeContent">
+      <IonContent slot="fixed" className="content">
        
       </IonContent>
     </IonPage>

@@ -14,7 +14,7 @@ const Shopping: React.FC = () => {
           headerTitle={"Listas de compras"} 
           headerRight={"headerUser"} />
       </IonHeader>
-      <IonContent fullscreen>
+      <IonContent fullscreen className="content">
         <IonHeader collapse="condense">
           <IonToolbar>
             <IonTitle size="large">Tab 5</IonTitle>

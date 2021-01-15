@@ -1,6 +1,6 @@
 import React from 'react';
-import { IonContent, IonHeader, IonPage, IonTitle, IonToolbar } from '@ionic/react';
-import ExploreContainer from '../components/ExploreContainer';
+import { IonContent, IonHeader, IonPage } from '@ionic/react';
+import AlergSearchList from '../components/AlergSearchList';
 import AlergHeader from '../components/AlergHeader';
 import './Search.css';
 
@@ -13,13 +13,8 @@ const Search: React.FC = () => {
           headerTitle={"headerSearch"} 
           headerRight={""} />
       </IonHeader>
-      <IonContent fullscreen>
-        <IonHeader collapse="condense">
-          <IonToolbar>
-            <IonTitle size="large">Tab 3</IonTitle>
-          </IonToolbar>
-        </IonHeader>
-        <ExploreContainer name="Tab 3 page" />
+      <IonContent fullscreen className="content">
+        <AlergSearchList />
       </IonContent>
     </IonPage>
   );

@@ -55,7 +55,7 @@ class Home extends React.Component {
             headerTitle={""} 
             headerRight={"headerUser"} />
         </IonHeader>
-        <IonContent slot="fixed" className="homeContent">
+        <IonContent slot="fixed" className="content">
           <div className="homeWrapper">
             <h1 className="alergTitle">Sugestões</h1>
             <div className="homeSlidesContainer">

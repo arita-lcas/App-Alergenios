@@ -1,3 +1,7 @@
+.content {
+    --background: var(--alerg-color-background);
+}
+
 /*my text styles*/
 .alergTitle {
     font-family: var(--alerg-font-family);

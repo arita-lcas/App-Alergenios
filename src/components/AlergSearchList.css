@@ -1,0 +1,22 @@
+.searchList {
+    padding: 4.5vh 0;
+}
+
+.listCard {
+    width: 298px;
+    height: 35px;
+    background-color: white;
+    border: 1.5px solid var(--alerg-color-dark-green);
+    border-radius: 5px;
+    margin: 0 auto;
+    margin-bottom: 7px;
+    padding: 0 13px;
+    display: flex;
+    align-items: center;
+}
+
+.listCardTitle {
+    font-family: var(--alerg-font-family);
+    color: var(--alerg-color-dark-green);
+    font-size: 20px;
+}

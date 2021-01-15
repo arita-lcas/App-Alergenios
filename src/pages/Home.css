@@ -1,7 +1,3 @@
-.homeContent {
-    --background: var(--alerg-color-background);
-}
-
 .homeSlidesContainer {
     --bullet-background: var(--alerg-color-dark-green);
     --bullet-background-active: var(--alerg-color-dark-green);
