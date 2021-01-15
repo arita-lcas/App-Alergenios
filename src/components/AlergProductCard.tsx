@@ -7,8 +7,10 @@ const AlergProductCard: React.FC<{ product: { id: number, img: string, name: str
     return (
         <div className="productCard">
             <div className="productCardImg"><IonImg src={process.env.PUBLIC_URL + props.product.img} /></div>
-            <p className="productCardName">{props.product.name}</p>
-            <p className="productCardBrand">{props.product.brand}</p>
+            <div className="productDescription">
+                <p className="productCardName">{props.product.name}</p>
+                <p className="productCardBrand">{props.product.brand}</p>
+            </div>
             <IonIcon icon={ellipsisVertical} className="productContextMenu" />
         </div>
     );

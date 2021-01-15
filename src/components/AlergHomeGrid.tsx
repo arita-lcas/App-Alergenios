@@ -1,7 +1,6 @@
 import React from 'react';
 import './AlergHomeGrid.css';
 import AlergProductCard from '../components/AlergProductCard';
-import { attachProps } from '@ionic/react/dist/types/components/utils';
 
 const AlergHomeGrid: React.FC<{ productSlide: { id: number, img: string, name: string, brand: string }[] }> = props => {
     return (

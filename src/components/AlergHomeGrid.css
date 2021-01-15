@@ -1,21 +1,5 @@
-
-.homeProducts {
-    width: 39vw;
-    height: 25.7vh;
-    background-color: white;
-    border: 1.5px solid var(--alerg-color-dark-green);
-    border-radius: 7px;
-}
-
 .homeGridContainer {
     display: grid;
     grid-template-columns: auto auto;
-    grid-gap: 3.5vw;
-}
-
-.homeProductImg {
-    padding-left: 11px;
-    padding-right: 11px;
-    padding-top: 11px;
-    padding-bottom: 7px;
+    grid-gap: 3vw;
 }

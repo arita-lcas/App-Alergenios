@@ -8,19 +8,19 @@
 		{
 			"id": 2,
 			"img": "/assets/img/item-2.jpg",
-			"name": "Chocolate de Leite",
+			"name": "Chocolate Leite",
 			"brand": "Toblerone"
 		},
 		{
 			"id": 3,
 			"img": "/assets/img/item-3.jpg",
-			"name": "Bolachas de Laranja",
+			"name": "Bolachas Laranja",
 			"brand": "Gullón"
 		},
 		{
 			"id": 4,
 			"img": "/assets/img/item-4.jpg",
-			"name": "Bolachas Sharkies",
+			"name": "Bolachas",
 			"brand": "Gullón"
 		}
 	],
@@ -52,13 +52,13 @@
 	[{
 			"id": 9,
 			"img": "/assets/img/item-9.jpg",
-			"name": "Iogurtes Morango",
+			"name": "Iogurtes",
 			"brand": "Danone"
 		},
 		{
 			"id": 10,
 			"img": "/assets/img/item-10.jpg",
-			"name": "Iogurtes Morango",
+			"name": "Iogurtes",
 			"brand": "Danone"
 		},
 		{
