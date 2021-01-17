@@ -9,7 +9,7 @@
     border: 1.5px solid var(--alerg-color-dark-green);
     border-radius: 5px;
     margin: 0 auto;
-    margin-bottom: 7px;
+    margin-top: 7px;
     padding: 0 13px;
     display: flex;
     align-items: center;
@@ -20,3 +20,35 @@
     color: var(--alerg-color-dark-green);
     font-size: 20px;
 }
+
+
+
+.listCardActive {
+    background-color: var(--alerg-color-dark-green);
+    border-radius: 5px 5px 0 0;
+}
+
+.listCardTitleActive {
+    color: var(--alerg-color-background);
+}
+
+  
+.hideListContent {
+    display: none;
+    overflow: hidden;
+    background-color: white;
+    width: 298px;
+}
+
+.showListContent {
+    overflow: hidden;
+    background-color: white;
+    width: 298px;
+    border: 1.5px solid var(--alerg-color-dark-green);
+    border-radius: 0 0 5px 5px;
+    margin: 0 auto;
+    padding: 0 13px;
+    display: grid;
+}
+
+
