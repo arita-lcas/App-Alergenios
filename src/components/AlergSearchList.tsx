@@ -1,3 +1,4 @@
+import { carSharp } from 'ionicons/icons';
 import React from 'react';
 import './AlergSearchList.css';
 
@@ -23,25 +24,43 @@ const listArray = [
     "Takeaway"
   ];
 
-  const subTitleArray = [
+  const subTitleArray = [ [
     "Leite",
     "Ovos",
     "Queijo"
-  ];
+    ],
+    [
+    "Arroz",
+    "Massa"
+  ] ];
 
-  function showSearchDiv () {
-    let element1 = document.getElementById('searchDiv');
-    let element2 = document.getElementById('listCard');
-    let element3 = document.getElementById('listCardTitle');
   
-    if (element1 && element2 && element3) {
-      element1.classList.toggle('showListContent');
-      element2.classList.toggle('listCardActive');
-      element3.classList.toggle('listCardTitleActive');
+
+  function showSearchDiv (event: any) {
+    
+    if (event && event.currentTarget && event.currentTarget.id) {
+      const elementId = event.currentTarget.id.split('#')[1];
+
+      let element1 = document.getElementById('searchDiv#'+elementId);
+      let element2 = document.getElementById('listCard#'+elementId);
+      let element3 = document.getElementById('listCardTitle#'+elementId);
+    
+      if (element1 && element2 && element3) {
+        element1.classList.toggle('showListContent');
+        element2.classList.toggle('listCardActive');
+        element3.classList.toggle('listCardTitleActive');
+      }
     }
-  
+
     return;
   }
+
+  // let i;
+  // for (i = 0; i < subTitleArray.length; i++) {
+
+  // }
+
+
 
 const AlergSearchList: React.FC = () => {
     return (
@@ -49,13 +68,13 @@ const AlergSearchList: React.FC = () => {
           {listArray.map( (listTitle, index) => {
             return (
             <div>
-              <div className="listCard" id="listCard" onClick={showSearchDiv}>
-                  <span className="listCardTitle" id="listCardTitle" key={index}>{listTitle}</span>
+              <div className="listCard" id={"listCard#"+index} onClick={showSearchDiv}>
+                  <span className="listCardTitle" id={"listCardTitle#"+index} key={index}>{listTitle}</span>
               </div>
-              <div className="hideListContent" id="searchDiv">
-                {subTitleArray.map( (listSubTitle, index) => {
+              <div className="hideListContent" id={"searchDiv#"+index}>
+                {subTitleArray.map( (listSubTitle, index2) => {
                   return (
-                    <span key={index}>{listSubTitle}</span>
+                    <span key={index2}>{listSubTitle}</span>
                   )
                 } )}
               </div>
