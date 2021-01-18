@@ -3,7 +3,7 @@ import { IonContent, IonHeader, IonPage } from '@ionic/react';
 import AlergHeader from '../components/AlergHeader';
 
 
-const ProductPage: React.FC = () => {
+const Product: React.FC = () => {
     return (
         <IonPage>
             <IonHeader>
@@ -19,4 +19,4 @@ const ProductPage: React.FC = () => {
     );
 }
 
-export default ProductPage;
+export default Product;
