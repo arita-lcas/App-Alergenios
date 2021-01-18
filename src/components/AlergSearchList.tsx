@@ -2,38 +2,84 @@ import { carSharp } from 'ionicons/icons';
 import React from 'react';
 import './AlergSearchList.css';
 
+
 const listArray = [
-    "Açúcar, mel e doces", 
-    "Alimentação infantil",
-    "Arroz, massa e farinha",
-    "Azeite, óleo e vinagre",
-    "Barras e cereais",
-    "Batatas fritas e snacks",
-    "Bebidas",
-    "Bolachas e bolos",
-    "Charcutaria",
-    "Congelados",
-    "Conservas, salsichas e legumes",
-    "Doçaria e chocolates",
-    "Feijão, grão e polpa de tomate",
-    "Molho, especiarias e sal",
-    "Laticínios",
-    "Padaria e pastelaria",
-    "Sobremesas",
-    "Sopas e cremes",
-    "Takeaway"
-  ];
-
-  const subTitleArray = [ [
-    "Leite",
-    "Ovos",
-    "Queijo"
-    ],
-    [
-    "Arroz",
-    "Massa"
-  ] ];
-
+  {
+    title: "Açúcar, mel e doces",
+    subTitle: ["Açúcar", "Adoçante", "Cremes para barrar", "Doces e compotas", "Mel"]
+  }, 
+  {
+    title: "Alimentação infantil",
+    subTitle: ["Alimentos lácteos", "Frutas e refeições", "Leites infantis", "Papas infantis", "Snacks e bolachinhas"]
+  }, 
+  {
+    title: "Arroz, massa e farinha",
+    subTitle: ["Arroz", "Farinha", "Massa"]
+  }, 
+  {
+    title: "Azeite, óleo e vinagre",
+    subTitle: ["Azeite", "Óleo", "Vinagre"]
+  }, 
+  {
+    title: "Barras e cereais",
+    subTitle: ["Barras de cereais", "Cereais"]
+  }, 
+  {
+    title: "Batatas fritas e snacks",
+    subTitle: ["Batatas fritas", "Frutos secos", "Pipocas", "Snacks"]
+  }, 
+  {
+    title: "Bebidas",
+    subTitle: ["Achocolatados", "Água", "Bebidas espirituosas e licores", "Café", "Cervejas e sidras", "Chá", "Champanhe e espumante", "Gin", "Refrigerantes", "Sumos e néctares", "Vinho", "Whisky"]
+  }, 
+  {
+    title: "Bolachas e bolos",
+    subTitle: ["Bolachas e biscoitos", "Bolos"]
+  }, 
+  {
+    title: "Charcutaria",
+    subTitle: ["Alheira, farinheira e morcela", "Bacon", "Chouriço e linguiça", "Chourição", "Fiambre", "Mortadela", "Paio e salpicão", "Presunto", "Salmão e outros fumados", "Salsichas"]
+  }, 
+  {
+    title: "Congelados",
+    subTitle: ["Aperitivos", "Croquetes", "Fruta", "Gelados e sobremesas", "Hambúrgueres e carne", "Marisco", "Peixe", "Pizzas", "Refeições prontas", "Vegetais"]
+  }, 
+  {
+    title: "Conservas, salsichas e legumes",
+    subTitle: ["Azeitonas e tremoços", "Cogumelos", "Conservas de peixe", "Conservas de vegetais", "Patês", "Refeições enlatadas", "Salsichas"]
+  }, 
+  {
+    title: "Doçaria e chocolates",
+    subTitle: ["Chocolate culinária", "Chocolates", "Rebuçados, gomas e pastilhas"]
+  }, 
+  {
+    title: "Feijão, grão e polpa de tomate",
+    subTitle: ["Feijão", "Grão", "Polpa de tomate"]
+  }, 
+  {
+    title: "Molhos, especiarias e sal",
+    subTitle: ["Especiarias", "Molhos", "Sal"]
+  }, 
+  {
+    title: "Laticínios",
+    subTitle: ["Bebidas vegetais", "Iogurtes", "Leite", "Manteigas e cremes vegetais", "Natas, bechamel e chantilly", "Ovos", "Queijos", "Sobremesas refrigeradas"]
+  }, 
+  {
+    title: "Padaria e pastelaria",
+    subTitle: ["Biscoitos", "Bolos", "Broas", "Pão", "Tostas"]
+  }, 
+  {
+    title: "Sobremesas",
+    subTitle: ["Gelatinas em pó", "Leite condensado", "Polpas e frutas em calda", "Preparados de bolos/mousses", "Outros (fermento, coco ralado, aromas)"]
+  }, 
+  {
+    title: "Sopas e cremes",
+  }, 
+  {
+    title: "Takeaway",
+    subTitle: ["Refeições", "Sobremesas"]
+  }
+];
   
 
   function showSearchDiv (event: any) {
@@ -45,7 +91,7 @@ const listArray = [
       let element2 = document.getElementById('listCard#'+elementId);
       let element3 = document.getElementById('listCardTitle#'+elementId);
     
-      if (element1 && element2 && element3) {
+      if (element1 && element2 && element3 && element1.childElementCount > 0) {
         element1.classList.toggle('showListContent');
         element2.classList.toggle('listCardActive');
         element3.classList.toggle('listCardTitleActive');
@@ -55,28 +101,25 @@ const listArray = [
     return;
   }
 
-  // let i;
-  // for (i = 0; i < subTitleArray.length; i++) {
-
-  // }
-
-
 
 const AlergSearchList: React.FC = () => {
     return (
         <div className="searchList">
-          {listArray.map( (listTitle, index) => {
+          {listArray.map( (objectInfo, index) => {
             return (
             <div>
               <div className="listCard" id={"listCard#"+index} onClick={showSearchDiv}>
-                  <span className="listCardTitle" id={"listCardTitle#"+index} key={index}>{listTitle}</span>
+                <span className="listCardTitle" id={"listCardTitle#"+index} key={index}>{objectInfo.title}</span>
               </div>
               <div className="hideListContent" id={"searchDiv#"+index}>
-                {subTitleArray.map( (listSubTitle, index2) => {
-                  return (
-                    <span key={index2}>{listSubTitle}</span>
-                  )
-                } )}
+                {objectInfo.subTitle
+                  ? objectInfo.subTitle.map( (listSubTitle, index2) => {
+                    return (
+                      <span key={index2}>{listSubTitle}</span>
+                    )
+                  } )
+                  : null
+                }
               </div>
             </div>
             )
