@@ -1,0 +1,59 @@
+.productPWrapper {
+    font-family: var(--alerg-font-family);
+    width: 297px;
+    margin: auto;
+}
+
+.productPInfo {
+    margin-bottom: 35px;
+    display: grid;
+    justify-content: center;
+    text-align: center;
+}
+
+div.productPInfo span {
+    color: var(--alerg-color-dark-green);
+    font-size: 19.5px;
+}
+
+.productPImg {
+    width: 230px;
+    height: 100px;
+    background-color: grey;
+}
+
+.productProfiles {
+    width: 100%;
+    height: 38.5px;
+    color: var(--alerg-color-background);
+    font-size: 22px;
+    font-weight: 600;
+    border-radius: 5px;
+    padding: 0 16px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.productProfile1 {
+    background-color: var(--alerg-color-medium-green);
+    margin-bottom: 21px;
+}
+
+.productProfile2 {
+    background-color: var(--alerg-color-red);
+    margin-bottom: 36px;
+}
+
+.productPIngredients {
+    color: var(--alerg-color-dark-green);
+    font-size: 22px;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+}
+
+.ingredientsIcon {
+    font-size: 35px;
+    margin-right: 5px;
+}
