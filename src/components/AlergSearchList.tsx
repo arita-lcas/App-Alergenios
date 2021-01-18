@@ -115,7 +115,7 @@ const AlergSearchList: React.FC = () => {
                 {objectInfo.subTitle
                   ? objectInfo.subTitle.map( (listSubTitle, index2) => {
                     return (
-                      <span key={index2}>{listSubTitle}</span>
+                      <span className="listCardSubTitle" key={index2}>• {listSubTitle}</span>
                     )
                   } )
                   : null
