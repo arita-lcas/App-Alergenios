@@ -9,7 +9,7 @@ import AlergProductCard from '../components/AlergProductCard';
 const AlergHomeGrid: React.FC<{ productSlide: { id: number, img: string, name: string, brand: string }[] }> = props => {
     return (
         <div className="homeGridContainer">
-            <a href="/product"><AlergProductCard product={props.productSlide[0]} /></a>
+            <AlergProductCard product={props.productSlide[0]} />
             <AlergProductCard product={props.productSlide[1]} />
             <AlergProductCard product={props.productSlide[2]} />
             <AlergProductCard product={props.productSlide[3]} />

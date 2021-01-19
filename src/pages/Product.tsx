@@ -5,7 +5,20 @@ import AlergHeader from '../components/AlergHeader';
 import './Product.css';
 
 
-const Product: React.FC = () => {
+// const homeProductsInfo = [
+//     "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12"
+// ];
+
+// for (let i = 0; i < homeProductsInfo.length; i++) {
+//    let prodTitle = homeProductsInfo[i];
+// }
+
+// function teste (posArr: any) {
+//     return homeProductsInfo[posArr];
+// }
+
+
+const Product: React.FC<{ productTeste: string }> = props => {
     return (
         <IonPage>
             <IonHeader>

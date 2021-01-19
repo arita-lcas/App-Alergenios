@@ -1,20 +1,8 @@
 import React from 'react';
 import { IonContent, IonHeader, IonPage, IonTitle, IonToolbar, IonIcon } from '@ionic/react';
-import ExploreContainer from '../components/ExploreContainer';
 import AlergHeader from '../components/AlergHeader';
-import { personCircleOutline } from 'ionicons/icons';
+import { addCircleOutline } from 'ionicons/icons';
 import './Favorites.css';
-
-
-function showSearchDiv () {
-  let element = document.getElementById('searchDiv');
-
-  if (element) {
-    element.classList.toggle('showcontent');
-  }
-
-  return;
-}
 
 const Favorites: React.FC = () => {
   return (
@@ -26,10 +14,18 @@ const Favorites: React.FC = () => {
           headerRight={"headerUser"} />
       </IonHeader>
       <IonContent fullscreen className="content">
-        {/* <button type="button" className="collapsible" onClick={showSearchDiv}>Open Collapsible</button>
-        <div className="hidecontent" id="searchDiv">
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-        </div> */}
+        <div className="prodListWrapper">
+          <div className="prodNewList prodList">
+            <IonIcon icon={addCircleOutline} className="prodNewListIcon" />
+            <span>Criar nova lista</span>
+          </div>
+          <div className="prodListName prodList">
+            <span>Favoritos</span>
+          </div>
+          <div className="prodListName prodList">
+            <span>Snacks</span>
+          </div>
+        </div>
       </IonContent>
     </IonPage>
   );

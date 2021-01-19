@@ -1,29 +1,36 @@
-/* .collapsible {
-    background-color: #777;
-    color: white;
-    cursor: pointer;
-    padding: 18px;
-    width: 100%;
-    border: none;
-    text-align: left;
-    outline: none;
-    font-size: 15px;
-  }
-  
-  .active, .collapsible:hover {
-    background-color: #555;
-  }
-  
-  .hidecontent {
-    padding: 0 18px;
-    display: none;
-    overflow: hidden;
-    background-color: #f1f1f1;
-  }
+.prodListWrapper {
+  font-family: var(--alerg-font-family);
+  width: 297px;
+  margin: auto;
+  margin-top: 25px;
+}
 
-  .showcontent {
-    padding: 0 18px;
-    display: block;
-    overflow: hidden;
-    background-color: #f1f1f1;
-  } */
+.prodList {
+  width: 100%;
+  height: 38.5px;
+  font-size: 22px;
+  font-weight: 600;
+  border-radius: 5px;
+  padding: 0 16px;
+  display: flex;
+  align-items: center;
+  margin-bottom: 17.5px;
+}
+
+.prodNewList {
+  color: var(--alerg-color-medium-green);
+  background-color: white;
+  border: 2px solid var(--alerg-color-medium-green);
+}
+
+.prodNewListIcon {
+  font-size: 30px;
+  padding-right: 16px;
+}
+
+.prodListName {
+  color: var(--alerg-color-background);
+  justify-content: space-between;
+  background-color: var(--alerg-color-medium-green);
+}
+

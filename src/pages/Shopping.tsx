@@ -1,8 +1,7 @@
 import React from 'react';
 import { IonContent, IonHeader, IonPage, IonTitle, IonToolbar, IonIcon } from '@ionic/react';
-import ExploreContainer from '../components/ExploreContainer';
 import AlergHeader from '../components/AlergHeader';
-import { personCircleOutline } from 'ionicons/icons';
+import { addCircleOutline } from 'ionicons/icons';
 import './Shopping.css';
 
 const Shopping: React.FC = () => {
@@ -15,12 +14,21 @@ const Shopping: React.FC = () => {
           headerRight={"headerUser"} />
       </IonHeader>
       <IonContent fullscreen className="content">
-        <IonHeader collapse="condense">
-          <IonToolbar>
-            <IonTitle size="large">Tab 5</IonTitle>
-          </IonToolbar>
-        </IonHeader>
-        <ExploreContainer name="Tab 5 page" />
+        <div className="prodListWrapper">
+          <div className="prodNewList prodList">
+            <IonIcon icon={addCircleOutline} className="prodNewListIcon" />
+            <span>Criar nova lista</span>
+          </div>
+          <div className="prodListName prodList">
+            <span>Compras gerais</span>
+          </div>
+          <div className="prodListName prodList">
+            <span>Compras semanais</span>
+          </div>
+          <div className="prodListName prodList">
+            <span>Sobremesa</span>
+          </div>
+        </div>
       </IonContent>
     </IonPage>
   );
