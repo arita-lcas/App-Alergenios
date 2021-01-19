@@ -13,7 +13,7 @@
     padding: 0 13px;
     display: flex;
     align-items: center;
-    transition: border-radius 1s ease-in-out;
+    transition: border-radius 0.5s ease;
 }
 
 .listCardTitle {
@@ -39,21 +39,25 @@
 .hideListContent {
     overflow: hidden;
     background-color: white;
-    border: 0px solid var(--alerg-color-dark-green);
+    border-width: 0; 
+    border-style: solid; 
+    border-color: var(--alerg-color-dark-green);
     border-radius: 0 0 5px 5px;
     margin: 0 auto;
     width: 298px;
     height: auto;
     max-height: 0;
-    transition: max-height 0.5s ease-in-out, border 0.1s linear;
+    transition: max-height 0.5s ease-in-out, border 0.1s ease;
     display: grid;
 }
 
 .hideListContent.effect {
     overflow: hidden;
     background-color: white;
-    border: 2px solid var(--alerg-color-dark-green);
+    border-width: 0 2px 2px 2px;
+    border-style: solid;
     border-radius: 0 0 5px 5px;
+    border-color: var(--alerg-color-dark-green);
     margin: 0 auto;
     width: 298px;
     max-height: 300px;
@@ -65,8 +69,10 @@
     color: var(--alerg-color-dark-green);
     font-size: 18px;
     padding: 5px 28px;
-    border-top: 1px solid var(--alerg-color-dark-green);
+    border-bottom: 1px solid var(--alerg-color-dark-green);
     width: 298px;
+    position: relative;
+    top: 1px;
 }
 
 
