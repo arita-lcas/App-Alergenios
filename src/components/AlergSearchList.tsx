@@ -92,7 +92,7 @@ const listArray = [
       let element3 = document.getElementById('listCardTitle#'+elementId);
     
       if (element1 && element2 && element3 && element1.childElementCount > 0) {
-        element1.classList.toggle('showListContent');
+        element1.classList.toggle('effect');
         element2.classList.toggle('listCardActive');
         element3.classList.toggle('listCardTitleActive');
       }

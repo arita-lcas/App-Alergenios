@@ -13,6 +13,7 @@
     padding: 0 13px;
     display: flex;
     align-items: center;
+    transition: border-radius 1s ease-in-out;
 }
 
 .listCardTitle {
@@ -36,19 +37,26 @@
 
   
 .hideListContent {
-    display: none;
     overflow: hidden;
     background-color: white;
+    border: 0px solid var(--alerg-color-dark-green);
+    border-radius: 0 0 5px 5px;
+    margin: 0 auto;
     width: 298px;
+    height: auto;
+    max-height: 0;
+    transition: max-height 0.5s ease-in-out, border 0.1s linear;
+    display: grid;
 }
 
-.showListContent {
+.hideListContent.effect {
     overflow: hidden;
     background-color: white;
-    width: 298px;
     border: 2px solid var(--alerg-color-dark-green);
     border-radius: 0 0 5px 5px;
     margin: 0 auto;
+    width: 298px;
+    max-height: 300px;
     display: grid;
 }
 
