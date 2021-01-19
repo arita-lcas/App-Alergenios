@@ -7,7 +7,7 @@ import { ellipsisVertical } from 'ionicons/icons';
 
 const AlergProductCard: React.FC<{ product: { id: number, img: string, name: string, brand: string } }> = props => {
     return (
-        <a href="/product"><div className="productCard">
+        <a href={"/product/"+props.product.id}><div className="productCard">
             <div className="productCardImg"><IonImg src={process.env.PUBLIC_URL + props.product.img} /></div>
             <div className="productDescription">
                 <p className="productCardName">{props.product.name}</p>
