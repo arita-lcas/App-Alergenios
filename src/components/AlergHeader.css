@@ -47,3 +47,7 @@
     top: -2.5vh;
     left: 8vh;
 }
+
+.backButton {
+    display: block;
+}

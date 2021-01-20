@@ -1,9 +1,28 @@
 import React from 'react';
-import { IonContent, IonHeader, IonPage, IonIcon } from '@ionic/react';
-import { chevronDownOutline, informationCircle } from 'ionicons/icons';
+import { IonContent, IonHeader, IonPage, IonIcon, IonImg } from '@ionic/react';
+import { chevronDownOutline, informationCircle, chevronForwardOutline, chevronBackOutline, starOutline, cartOutline, locationOutline } from 'ionicons/icons';
 import { RouteComponentProps } from "react-router-dom";
 import AlergHeader from '../components/AlergHeader';
 import './Product.css';
+
+
+function showProfileDiv (event: any) {
+  // debugger;
+  if (event && event.currentTarget && event.currentTarget.id) {
+    const elementId = event.currentTarget.id.split('#')[1];
+
+    let element1 = document.getElementById('hiddenProfileContent#'+elementId);
+    // let element2 = document.getElementById('hiddenProfileContent#'+elementId);
+  
+    if (element1 && element1.childElementCount > 0) {
+      element1.classList.toggle('effect');
+      // element2.classList.toggle('effect');
+    }
+  }
+
+  return;
+}
+
 
 
 async function loadData() {
@@ -36,8 +55,6 @@ class Product extends React.Component<ProductPageProps, {product: { id: number, 
   componentDidMount () {
     this.productId = Number(this.props.match.params.id);
 
-    console.log(this.productId);
-
     loadData().then((loadDataResponse) => {
 
       const productTmp = loadDataResponse.filter( (productElement: any) => productElement.id === this.productId )[0];
@@ -62,16 +79,34 @@ class Product extends React.Component<ProductPageProps, {product: { id: number, 
           <div className="productPWrapper">
             <div className="productPInfo">
               <h1 className="alergTitle">{this.state.product.name}</h1>
-                <span>{this.state.product.brand}</span>
-                <div className="productPImg"></div>
+              <span>{this.state.product.brand}</span>
+              <div className="productPGridContainer">
+                <IonIcon icon={chevronBackOutline} />
+                <div className="productPImg"><IonImg src={process.env.PUBLIC_URL + this.state.product.img} /></div>
+                <IonIcon icon={chevronForwardOutline} />
+              </div>
+              <div className="productPIcons">
+                <IonIcon icon={starOutline} />
+                <IonIcon icon={cartOutline} />
+                <IonIcon icon={locationOutline} />
+              </div>
             </div>
-            <div className="productProfile1 productProfiles">
+            <div className="productProfile1 productProfiles" id={"productProfile#"+1} onClick={showProfileDiv}>
               <span>Marta</span>
               <IonIcon icon={chevronDownOutline} />
             </div>
-            <div className="productProfile2 productProfiles">
+            <div className="hideProfileContent" id={"hiddenProfileContent#"+1}>
+              <span className="profileEvaluation">Não contém alergénios para este perfil.</span>
+            </div>
+
+            <div className="productProfile2 productProfiles" id={"productProfile#"+2} onClick={showProfileDiv}>
               <span>Sofia</span>
               <IonIcon icon={chevronDownOutline} />
+            </div>
+            <div className="hideProfileContent" id={"hiddenProfileContent#"+2}>
+              <span className="profileEvaluation"><b>Contém lactose</b>, sob as seguintes formas:</span>
+              <span className="profileEvaluation profileEvaluationTopic">• Leite em pó</span>
+              <span className="profileEvaluation profileEvaluationTopic">• Gordura do leite</span>
             </div>
             <div className="productPIngredients">
               <IonIcon icon={informationCircle} className="ingredientsIcon" />

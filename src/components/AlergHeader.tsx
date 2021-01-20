@@ -1,5 +1,5 @@
 import React from 'react';
-import { IonToolbar, IonTitle, IonIcon, IonSearchbar } from '@ionic/react';
+import { IonToolbar, IonTitle, IonIcon, IonSearchbar, IonBackButton } from '@ionic/react';
 import { personCircleOutline, arrowBackOutline, pencilOutline } from 'ionicons/icons';
 import './AlergHeader.css';
 
@@ -12,7 +12,8 @@ const AlergHeader: React.FC<{ headerLeft: unknown; headerTitle: string; headerRi
             <div className="headerGridCol">
               {props.headerLeft === "headerReturn"
                 ? <div>
-                    <IonIcon icon={arrowBackOutline} className='headerUserIcon' />
+                    {/* <IonIcon icon={arrowBackOutline} className='headerUserIcon' /> */}
+                    <IonBackButton className="backButton" />
                   </div>
                 : <div></div>
               }
