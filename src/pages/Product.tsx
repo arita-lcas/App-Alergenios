@@ -1,28 +1,30 @@
 import React from 'react';
-import { IonContent, IonHeader, IonPage, IonIcon, IonImg } from '@ionic/react';
+import { IonContent, IonHeader, IonPage, IonIcon, IonImg, IonBackdrop } from '@ionic/react';
 import { chevronDownOutline, informationCircle, chevronForwardOutline, chevronBackOutline, starOutline, cartOutline, locationOutline } from 'ionicons/icons';
 import { RouteComponentProps } from "react-router-dom";
 import AlergHeader from '../components/AlergHeader';
+import Teste from '../components/Teste';
 import './Product.css';
+import Popover from '../components/AlergPopover';
+
+
+
+
 
 
 function showProfileDiv (event: any) {
-  // debugger;
   if (event && event.currentTarget && event.currentTarget.id) {
     const elementId = event.currentTarget.id.split('#')[1];
 
     let element1 = document.getElementById('hiddenProfileContent#'+elementId);
-    // let element2 = document.getElementById('hiddenProfileContent#'+elementId);
   
     if (element1 && element1.childElementCount > 0) {
       element1.classList.toggle('effect');
-      // element2.classList.toggle('effect');
     }
   }
 
   return;
 }
-
 
 
 async function loadData() {
@@ -44,10 +46,13 @@ interface ProductPageProps extends RouteComponentProps<{
 }> {}
 
 
-class Product extends React.Component<ProductPageProps, {product: { id: number, img: string, name: string, brand: string }}> {
-
+class Product extends React.Component<
+ProductPageProps, 
+{product: { id: number, img: string, name: string, brand: string }, 
+popoverStatus: any }> {
   state: any = {
-    product: {}
+    product: {},
+    popoverStatus: false
   }
 
   productId = 0;
@@ -56,13 +61,18 @@ class Product extends React.Component<ProductPageProps, {product: { id: number, 
     this.productId = Number(this.props.match.params.id);
 
     loadData().then((loadDataResponse) => {
-
       const productTmp = loadDataResponse.filter( (productElement: any) => productElement.id === this.productId )[0];
 
       this.setState({product: productTmp});
     }).catch((err) => {
       console.log(err.statusText);
     });
+  }
+
+  showPopover (value: boolean) {
+    this.setState( {
+      popoverStatus: value
+    })
   }
 
 
@@ -95,7 +105,7 @@ class Product extends React.Component<ProductPageProps, {product: { id: number, 
               <span>Marta</span>
               <IonIcon icon={chevronDownOutline} />
             </div>
-            <div className="hideProfileContent" id={"hiddenProfileContent#"+1}>
+            <div className="hideProfileContent hideProfileBorder1" id={"hiddenProfileContent#"+1}>
               <span className="profileEvaluation">Não contém alergénios para este perfil.</span>
             </div>
 
@@ -103,17 +113,26 @@ class Product extends React.Component<ProductPageProps, {product: { id: number, 
               <span>Sofia</span>
               <IonIcon icon={chevronDownOutline} />
             </div>
-            <div className="hideProfileContent" id={"hiddenProfileContent#"+2}>
+            <div className="hideProfileContent hideProfileBorder2" id={"hiddenProfileContent#"+2}>
               <span className="profileEvaluation"><b>Contém lactose</b>, sob as seguintes formas:</span>
               <span className="profileEvaluation profileEvaluationTopic">• Leite em pó</span>
               <span className="profileEvaluation profileEvaluationTopic">• Gordura do leite</span>
             </div>
-            <div className="productPIngredients">
+            {/* <div className="productPIngredients">
+              <IonIcon icon={informationCircle} className="ingredientsIcon" />
+              <span>Ver ingredientes</span>
+            </div> */}
+            <Popover />
+            <Teste />
+            <div className="productPIngredients" onClick={this.showPopover.bind(this, true)}>
               <IonIcon icon={informationCircle} className="ingredientsIcon" />
               <span>Ver ingredientes</span>
             </div>
           </div>
+          <IonBackdrop tappable={true} visible={this.state.popoverStatus} className="backdrop">
+          </IonBackdrop>
         </IonContent>
+        
       </IonPage>
     );
   } 

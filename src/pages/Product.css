@@ -87,6 +87,10 @@ div.productPInfo span {
 }
 
 
+.backdrop {
+    opacity: 92%;
+}
+
 /* Show profile hidden content */
 
 .hideProfileContent {
@@ -94,14 +98,21 @@ div.productPInfo span {
     background-color: white;
     border-width: 0; 
     border-style: solid; 
-    border-color: var(--alerg-color-dark-green);
     border-radius: 0 0 5px 5px;
     margin: 0 auto;
-    width: 298px;
+    width: 100%;
     height: auto;
     max-height: 0;
     transition: max-height 0.5s ease-in-out, border 0.1s ease;
     display: grid;
+}
+
+.hideProfileBorder1 {
+    border-color: var(--alerg-color-medium-green);
+}
+
+.hideProfileBorder2 {
+    border-color: var(--alerg-color-red);
 }
 
 .hideProfileContent.effect {
@@ -110,9 +121,8 @@ div.productPInfo span {
     border-width: 0 2px 2px 2px;
     border-style: solid;
     border-radius: 0 0 5px 5px;
-    border-color: var(--alerg-color-red);
     margin: 0 auto;
-    width: 298px;
+    width: 100%;
     max-height: 450px;
     display: grid;
     padding: 15px 0;
@@ -130,3 +140,4 @@ div.productPInfo span {
 .profileEvaluationTopic {
     padding: 0px 16px;
 }
+

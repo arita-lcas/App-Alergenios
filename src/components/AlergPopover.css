@@ -1,0 +1,21 @@
+.productPIngredients {
+    color: var(--alerg-color-dark-green);
+    font-size: 22px;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    margin-top: 36px;
+    margin-bottom: 36px;
+}
+
+.ingredientsIcon {
+    font-size: 35px;
+    margin-right: 5px;
+}
+
+.my-custom-class {
+    --height: 328px;
+    --width: 219px;
+    --background: rgba(252,251,247,.80);
+    --backdrop-opacity: 92%;
+}
