@@ -1,14 +1,10 @@
 import React from 'react';
-import { IonContent, IonHeader, IonPage, IonIcon, IonImg, IonBackdrop } from '@ionic/react';
+import { IonContent, IonHeader, IonPage, IonIcon, IonImg } from '@ionic/react';
 import { chevronDownOutline, informationCircle, chevronForwardOutline, chevronBackOutline, starOutline, cartOutline, locationOutline } from 'ionicons/icons';
 import { RouteComponentProps } from "react-router-dom";
 import AlergHeader from '../components/AlergHeader';
 import './Product.css';
-import Popover from '../components/AlergPopover';
-
-
-
-
+import IngredientsPopover from '../components/AlergIngredientsPopover';
 
 
 function showProfileDiv (event: any) {
@@ -39,6 +35,7 @@ async function loadData() {
     return await response.json();
   }
 }
+
 
 interface ProductPageProps extends RouteComponentProps<{
   id: string;
@@ -121,7 +118,7 @@ popoverStatus: any }> {
               <IonIcon icon={informationCircle} className="ingredientsIcon" />
               <span>Ver ingredientes</span>
             </div> */}
-            <Popover />
+            <IngredientsPopover ingredientsList={this.state.product.ingredients} />
           </div>
         </IonContent>
         

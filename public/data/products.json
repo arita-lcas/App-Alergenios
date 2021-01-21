@@ -2,31 +2,36 @@
         "id": 1,
         "img": "/assets/img/item-1.jpg",
         "name": "Yofu Soja Natural",
-        "brand": "Alpro"
+        "brand": "Alpro",
+        "ingredients": "Soja"
     },
     {
         "id": 2,
         "img": "/assets/img/item-2.jpg",
         "name": "Chocolate Leite",
-        "brand": "Toblerone"
+        "brand": "Toblerone",
+        "ingredients": "Leite"
     },
     {
         "id": 3,
         "img": "/assets/img/item-3.jpg",
         "name": "Bolachas Laranja",
-        "brand": "Gullón"
+        "brand": "Gullón",
+        "ingredients": "Água"
     },
     {
         "id": 4,
         "img": "/assets/img/item-4.jpg",
         "name": "Bolachas",
-        "brand": "Gullón"
+        "brand": "Gullón",
+        "ingredients": "Cacau"
     },
     {
         "id": 5,
         "img": "/assets/img/item-5.jpg",
         "name": "Placas Lasanha",
-        "brand": "Milaneza"
+        "brand": "Milaneza",
+        "ingredients": "Açúcar"
     },
     {
         "id": 6,

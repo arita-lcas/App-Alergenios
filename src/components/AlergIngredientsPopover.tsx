@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
 import { IonIcon, IonAlert } from '@ionic/react';
 import { informationCircle } from 'ionicons/icons';
-import './AlergPopover.css';
+import './AlergIngredientsPopover.css';
 
-const Popover: React.FC = () => {
+const IngredientsPopover: React.FC< { ingredientsList: string }> = props => {
     const [showAlert1, setShowAlert1] = useState(false);
 
   return (
@@ -17,8 +17,8 @@ const Popover: React.FC = () => {
             isOpen={showAlert1}
             onDidDismiss={() => setShowAlert1(false)}
             cssClass='my-custom-class'
-            header={'Alert'}
-            message={'This is an alert message.'}
+            header={'Ingredientes'}
+            message={props.ingredientsList}
         />
 
     
@@ -27,4 +27,4 @@ const Popover: React.FC = () => {
   );
 };
 
-export default Popover;
+export default IngredientsPopover;
