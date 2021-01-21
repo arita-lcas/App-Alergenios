@@ -3,7 +3,6 @@ import { IonContent, IonHeader, IonPage, IonIcon, IonImg, IonBackdrop } from '@i
 import { chevronDownOutline, informationCircle, chevronForwardOutline, chevronBackOutline, starOutline, cartOutline, locationOutline } from 'ionicons/icons';
 import { RouteComponentProps } from "react-router-dom";
 import AlergHeader from '../components/AlergHeader';
-import Teste from '../components/Teste';
 import './Product.css';
 import Popover from '../components/AlergPopover';
 
@@ -123,14 +122,7 @@ popoverStatus: any }> {
               <span>Ver ingredientes</span>
             </div> */}
             <Popover />
-            <Teste />
-            <div className="productPIngredients" onClick={this.showPopover.bind(this, true)}>
-              <IonIcon icon={informationCircle} className="ingredientsIcon" />
-              <span>Ver ingredientes</span>
-            </div>
           </div>
-          <IonBackdrop tappable={true} visible={this.state.popoverStatus} className="backdrop">
-          </IonBackdrop>
         </IonContent>
         
       </IonPage>
