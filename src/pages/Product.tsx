@@ -5,6 +5,9 @@ import { RouteComponentProps } from "react-router-dom";
 import AlergHeader from '../components/AlergHeader';
 import './Product.css';
 import IngredientsPopover from '../components/AlergIngredientsPopover';
+import SupermarketsPopover from '../components/AlergSupermarketsPopover';
+import FavoritesPopover from '../components/AlergFavoritesPopover';
+import ShoppingPopover from '../components/AlergShoppingPopover';
 
 
 function showProfileDiv (event: any) {
@@ -92,9 +95,9 @@ popoverStatus: any }> {
                 <IonIcon icon={chevronForwardOutline} />
               </div>
               <div className="productPIcons">
-                <IonIcon icon={starOutline} />
-                <IonIcon icon={cartOutline} />
-                <IonIcon icon={locationOutline} />
+                <FavoritesPopover />
+                <ShoppingPopover />
+                <SupermarketsPopover supermarketsList={this.state.product.supermarkets} />
               </div>
             </div>
             <div className="productProfile1 productProfiles" id={"productProfile#"+1} onClick={showProfileDiv}>

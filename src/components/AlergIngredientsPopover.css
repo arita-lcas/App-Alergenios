@@ -13,9 +13,11 @@
     margin-right: 5px;
 }
 
-.my-custom-class {
-    --height: 328px;
+.ingredientPopover {
+    --min-height: 100px;
+    --max-height: 308px;
     --width: 219px;
     --background: rgba(252,251,247,.80);
     --backdrop-opacity: 92%;
+    font-family: var(--alerg-font-family);
 }

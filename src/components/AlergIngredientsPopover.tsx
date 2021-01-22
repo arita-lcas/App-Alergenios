@@ -16,8 +16,8 @@ const IngredientsPopover: React.FC< { ingredientsList: string }> = props => {
         <IonAlert
             isOpen={showAlert1}
             onDidDismiss={() => setShowAlert1(false)}
-            cssClass='my-custom-class'
-            header={'Ingredientes'}
+            cssClass='ingredientPopover'
+            header={'Ingredientes:'}
             message={props.ingredientsList}
         />
 

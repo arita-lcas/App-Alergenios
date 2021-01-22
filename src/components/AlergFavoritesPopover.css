@@ -1,0 +1,21 @@
+.favoritesPopover {
+    --min-height: 100px;
+    --max-height: 360px;
+    --width: 279px;
+    --background: rgba(252,251,247,.80);
+    --backdrop-opacity: 92%;
+    font-family: var(--alerg-font-family);
+}
+
+.favoritesPopover .favoritesPopoverButton {
+    background: var(--alerg-color-orange);
+    margin: auto;
+    border-radius: 20px;
+    padding: 8px 26px;
+    color: var(--alerg-color-background);
+    margin-bottom: 15px;
+    margin-top: 10px;
+    text-transform: initial;
+    font-size: 18px;
+    font-weight: 600;
+}

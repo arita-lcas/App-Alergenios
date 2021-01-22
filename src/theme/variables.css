@@ -19,6 +19,9 @@ http://ionicframework.com/docs/theming/ */
   --alerg-color-orange: #e59560;
   --alerg-color-red: #cc5752;
   --ion-backdrop-color: #608780;
+  --ion-text-color: #608780;
+  --ion-color-step-850: #608780;
+  --ion-color-step-550: #608780;
 
   /** primary **/
   --ion-color-primary: #3880ff;

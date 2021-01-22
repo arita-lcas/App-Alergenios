@@ -71,26 +71,6 @@ div.productPInfo span {
     margin-top: 21px;
 }
 
-.productPIngredients {
-    color: var(--alerg-color-dark-green);
-    font-size: 22px;
-    font-weight: 600;
-    display: flex;
-    align-items: center;
-    margin-top: 36px;
-    margin-bottom: 36px;
-}
-
-.ingredientsIcon {
-    font-size: 35px;
-    margin-right: 5px;
-}
-
-
-.backdrop {
-    opacity: 92%;
-}
-
 /* Show profile hidden content */
 
 .hideProfileContent {
