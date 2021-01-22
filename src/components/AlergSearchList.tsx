@@ -111,7 +111,7 @@ const AlergSearchList: React.FC = () => {
               <div className="listCard" id={"listCard#"+index} onClick={showSearchDiv}>
                 <span className="listCardTitle" id={"listCardTitle#"+index} key={index}>{objectInfo.title}</span>
               </div>
-              <div className="hideListContent" id={"searchDiv#"+index}>
+              <a href={"/searchresults/"} className="listLink"><div className="hideListContent" id={"searchDiv#"+index}>
                 {objectInfo.subTitle
                   ? objectInfo.subTitle.map( (listSubTitle, index2) => {
                     return (
@@ -120,7 +120,7 @@ const AlergSearchList: React.FC = () => {
                   } )
                   : null
                 }
-              </div>
+              </div></a>
             </div>
             )
           } )}

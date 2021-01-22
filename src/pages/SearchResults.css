@@ -1,0 +1,8 @@
+.searchResultsWrapper {
+    width: 296px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-gap: 3vw;
+    margin-top: 25px;
+}
