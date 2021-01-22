@@ -2,59 +2,79 @@ import React from 'react';
 import { IonToolbar, IonTitle, IonIcon, IonSearchbar, IonBackButton } from '@ionic/react';
 import { personCircleOutline, arrowBackOutline, pencilOutline } from 'ionicons/icons';
 import './AlergHeader.css';
+import { withRouter, RouteComponentProps  } from 'react-router-dom';
 
 
-const AlergHeader: React.FC<{ headerLeft: unknown; headerTitle: string; headerRight: string }> = props => {
+interface AlergHeaderProps extends RouteComponentProps {
+  headerLeft: string,
+  headerTitle: string, 
+  headerRight: string
+}
+
+
+class AlergHeader extends React.Component<AlergHeaderProps> {
+
+  searchText (event: any) {
+    if (event && event.key === "Enter" && event.target && event.target.value !== undefined) {
+      this.props.history.push('/searchresults');
+    }
+  };
+  
+  render () {
     return (
-        <IonToolbar className="headerToolbar">
-          <div className="headerGridContainer">
-            
-            <div className="headerGridCol">
-              {props.headerLeft === "headerReturn"
-                ? <div>
-                    {/* <IonIcon icon={arrowBackOutline} className='headerUserIcon' /> */}
-                    <IonBackButton className="backButton" />
-                  </div>
-                : <div></div>
-              }
-            </div>
-
-            <div className="headerGridCol">
-              {props.headerTitle === "headerSearch"
-                ? <div className="headerSearch">
-                    <IonSearchbar className="headerSearchbar" placeholder=""></IonSearchbar>
-                    <hr className="searchLine"></hr>
-                  </div>
-                : <div>
-                    <IonTitle className="headerTitle">{props.headerTitle}</IonTitle>
-                  </div>
-              }
-            </div>
-
-            <div className="headerGridCol"> 
-              {props.headerRight === "headerUser" 
-                ? <div >
-                    <IonIcon icon={personCircleOutline} className='headerUserIcon' />
-                    <br />
-                    <span className="headerUserText">Marta</span>
-                  </div>
-                : <div> 
-                  {props.headerRight === "headerEdit" 
-                    ? <div>
-                        <IonIcon icon={pencilOutline} className='headerUserIcon' />
-                      </div>
-                    : <div></div>
-                  }
+      <IonToolbar className="headerToolbar">
+        <div className="headerGridContainer">
+          
+          <div className="headerGridCol">
+            {this.props.headerLeft === "headerReturn"
+              ? <div>
+                  {/* <IonIcon icon={arrowBackOutline} className='headerUserIcon' /> */}
+                  <IonBackButton className="backButton" />
                 </div>
-              }
-            </div>
-
+              : <div></div>
+            }
           </div>
-        </IonToolbar>
-    );
-};
 
-export default AlergHeader;
+          <div className="headerGridCol">
+            {this.props.headerTitle === "headerSearch"
+              ? <div className="headerSearch">
+                  <IonSearchbar className="headerSearchbar" placeholder="" onKeyPress={this.searchText.bind(this)}></IonSearchbar>
+                  <hr className="searchLine"></hr>
+                </div>
+              : <div>
+                  <IonTitle className="headerTitle">{this.props.headerTitle}</IonTitle>
+                </div>
+            }
+          </div>
+
+          <div className="headerGridCol"> 
+            {this.props.headerRight === "headerUser" 
+              ? <div >
+                  <IonIcon icon={personCircleOutline} className='headerUserIcon' />
+                  <br />
+                  <span className="headerUserText">Marta</span>
+                </div>
+              : <div> 
+                {this.props.headerRight === "headerEdit" 
+                  ? <div>
+                      <IonIcon icon={pencilOutline} className='headerUserIcon' />
+                    </div>
+                  : <div></div>
+                }
+              </div>
+            }
+          </div>
+
+        </div>
+      </IonToolbar>
+    );
+  }   
+}
+
+export default withRouter(AlergHeader);
+
+
+// <{ headerLeft: unknown; headerTitle: string; headerRight: string }> = props =>
 
 
 
