@@ -44,7 +44,6 @@ class SearchResults extends React.Component<SearchPageProps> {
     let filteredResponse = filteredNames.concat(filteredBrands).concat(filteredSubCategories);
 
     filteredResponse = filteredResponse.filter((item: never, index: number) => {
-      console.log("ola");
       return filteredResponse.indexOf(item) === index;
     });
 

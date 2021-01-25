@@ -70,7 +70,7 @@ const listArray = [
   }, 
   {
     title: "Sobremesas",
-    subTitle: ["Gelatinas em pó", "Leite condensado", "Polpas e frutas em calda", "Preparados de bolos/mousses", "Outros (fermento, coco ralado, aromas)"]
+    subTitle: ["Gelatinas em pó", "Leite condensado", "Polpas e frutas em calda", "Preparados de bolos e mousses", "Outros (fermento, coco ralado, aromas)"]
   }, 
   {
     title: "Sopas e cremes",
@@ -100,6 +100,12 @@ const listArray = [
 
     return;
   }
+
+  // function searchSubCategory (event: any) {
+  //   if (event && event.target) {
+  //     this.props.history.push(`/searchresults/${event.target.value}`);
+  //   }
+  // };
 
 
 const AlergSearchList: React.FC = () => {
