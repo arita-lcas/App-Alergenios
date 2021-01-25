@@ -82,7 +82,8 @@ popoverStatus: any }> {
             <AlergHeader 
                 headerLeft={"headerReturn"} 
                 headerTitle={""} 
-                headerRight={"headerEdit"} />
+                headerRight={"headerEdit"}
+                searchedText={""} />
         </IonHeader>
         <IonContent className="content">
           <div className="productPWrapper">

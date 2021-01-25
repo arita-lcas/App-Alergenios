@@ -11,7 +11,8 @@ const Search: React.FC = () => {
         <AlergHeader 
           headerLeft={""} 
           headerTitle={"headerSearch"} 
-          headerRight={""} />
+          headerRight={""}
+          searchedText={""} />
       </IonHeader>
       <IonContent fullscreen className="content">
         <AlergSearchList />

@@ -8,14 +8,15 @@ import { withRouter, RouteComponentProps  } from 'react-router-dom';
 interface AlergHeaderProps extends RouteComponentProps {
   headerLeft: string,
   headerTitle: string, 
-  headerRight: string
+  headerRight: string,
+  searchedText: string
 }
 
 
 class AlergHeader extends React.Component<AlergHeaderProps> {
 
   searchText (event: any) {
-    if (event && event.key === "Enter" && event.target && event.target.value !== undefined) {
+    if (event && event.key === "Enter" && event.target && event.target.value) {
       this.props.history.push(`/searchresults/${event.target.value}`);
     }
   };
@@ -37,7 +38,7 @@ class AlergHeader extends React.Component<AlergHeaderProps> {
           <div className="headerGridCol">
             {this.props.headerTitle === "headerSearch"
               ? <div className="headerSearch">
-                  <IonSearchbar className="headerSearchbar" placeholder="" onKeyPress={this.searchText.bind(this)}></IonSearchbar>
+                  <IonSearchbar className="headerSearchbar" placeholder="" onKeyPress={this.searchText.bind(this)} value={this.props.searchedText}></IonSearchbar>
                   <hr className="searchLine"></hr>
                 </div>
               : <div>

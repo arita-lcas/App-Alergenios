@@ -107,7 +107,7 @@ const AlergSearchList: React.FC = () => {
         <div className="searchList">
           {listArray.map( (objectInfo, index) => {
             return (
-            <div>
+            <div key={index}>
               <div className="listCard" id={"listCard#"+index} onClick={showSearchDiv}>
                 <span className="listCardTitle" id={"listCardTitle#"+index} key={index}>{objectInfo.title}</span>
               </div>

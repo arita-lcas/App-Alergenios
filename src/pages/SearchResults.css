@@ -6,3 +6,14 @@
     grid-gap: 3vw;
     margin-top: 25px;
 }
+
+.noResults {
+    height: 100%;
+    width: 76vw;
+    display: flex;
+    margin: auto;
+    align-items: center;
+    font-family: var(--alerg-font-family);
+    font-size: 18px;
+    font-weight: 600;
+}

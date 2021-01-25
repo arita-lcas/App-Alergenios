@@ -10,7 +10,8 @@ const AddProduct: React.FC = () => {
         <AlergHeader 
           headerLeft={"headerReturn"} 
           headerTitle={""} 
-          headerRight={""} />
+          headerRight={""}
+          searchedText={""} />
       </IonHeader>
       <IonContent slot="fixed" className="content">
        

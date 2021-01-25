@@ -11,7 +11,8 @@ const Favorites: React.FC = () => {
         <AlergHeader 
           headerLeft={""} 
           headerTitle={"Listas de favoritos"} 
-          headerRight={"headerUser"} />
+          headerRight={"headerUser"}
+          searchedText={""} />
       </IonHeader>
       <IonContent fullscreen className="content">
         <div className="prodListWrapper">

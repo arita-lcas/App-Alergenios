@@ -53,7 +53,8 @@ class Home extends React.Component {
           <AlergHeader 
             headerLeft={""} 
             headerTitle={""} 
-            headerRight={"headerUser"} />
+            headerRight={"headerUser"}
+            searchedText={""} />
         </IonHeader>
         <IonContent slot="fixed" className="content">
           <div className="homeWrapper">

@@ -4,7 +4,8 @@
         "name": "Yofu Soja Natural",
         "brand": "Alpro",
         "ingredients": "• Base de SOJA (água, grãos de SOJA descascados (10,7%))<br>• Açúcar<br>• Citrato tricálcito<br>• Estabilizador (pectinas)<br>• Reguladores de acidez (citratos de sódio, ácido cítrico)<br>• Aroma<br>• Sal marinho<br>• Antioxidantes (extrato rico em tocoferóis, ésteres de ácidos gordos do ácido ascórbico)<br>• Vitaminas (B12,D2)<br>• Fermentos vivos de iogurte (S. thermophilus, L. bulgaricus)",
-        "supermarkets": "• Celeiro<br>• Continente<br>• El Corte Inglés<br>• Froiz<br>• Intermarché<br>• Minipreço<br>• Pingo Doce<br>• Spar"
+        "supermarkets": "• Celeiro<br>• Continente<br>• El Corte Inglés<br>• Froiz<br>• Intermarché<br>• Minipreço<br>• Pingo Doce<br>• Spar",
+        "subcategory": "Iogurtes"
     },
     {
         "id": 2,
@@ -12,7 +13,8 @@
         "name": "Chocolate Leite",
         "brand": "Toblerone",
         "ingredients": "• Açúcar<br>• Leite em pó<br>• Manteiga de cacau<br>• Pasta de cacau<br>• Mel (0,3%)<br>• Gordura do leite<br>• Amêndoas (1,6%)<br>• Emulsionante (lecitina de soja)<br>• Clara de ovo<br>• Aroma<br>• Cacau: 28% mínimo",
-        "supermarkets": "• Aldi<br>• Auchan<br>• Continente<br>• El Corte Inglés<br>• Froiz<br>• Intermarché<br>• Minipreço<br>• Pingo Doce<br>• Spar"
+        "supermarkets": "• Aldi<br>• Auchan<br>• Continente<br>• El Corte Inglés<br>• Froiz<br>• Intermarché<br>• Minipreço<br>• Pingo Doce<br>• Spar",
+        "subcategory": "Chocolate"
     },
     {
         "id": 3,
@@ -20,7 +22,8 @@
         "name": "Bolachas Laranja",
         "brand": "Gullón",
         "ingredients": "• Copos de aveia<br>• Amido de milho<br>• Óleo vegetal (girassol alto oleico)<br>• Açúcar<br>• Fibra vegetal<br>• Pasas<br>• Farinha de arroz<br>• Amido de arroz<br>• Sumo de laranja em pó<br>• Fibra de frutas cítricas<br>• Sal<br>• Levedantes (bicarbonatos de sódio e amónio)<br>• Emulsionante (lecitina de soja)<br>• Aroma",
-        "supermarkets": "• Auchan<br>• Celeiro<br>• Continente<br>• El Corte Inglés<br>• Pingo Doce"
+        "supermarkets": "• Auchan<br>• Celeiro<br>• Continente<br>• El Corte Inglés<br>• Pingo Doce",
+        "subcategory": "Bolachas e biscoitos"
     },
     {
         "id": 4,
@@ -28,7 +31,8 @@
         "name": "Bolachas",
         "brand": "Gullón",
         "ingredients": "• Fécula de milho<br>• Açúcar<br>• Óleo vegetal (girassol alto oleico) 15%<br>• Farinha de milho<br>• Amido de batata<br>• Amido de arroz<br>• Cacau em pó<br>• Xarope de glicose e frutose de milho<br>• Farinha de arroz<br>• Farelo de arroz<br>• Levedantes (bicarbonatos de sódio e amónio)<br>• Sal<br>• Emulsionante (lecitina de soja)",
-        "supermarkets": "• Auchan<br>• Celeiro<br>• Continente"
+        "supermarkets": "• Auchan<br>• Celeiro<br>• Continente",
+        "subcategory": "Bolachas e biscoitos"
     },
     {
         "id": 5,
@@ -36,7 +40,8 @@
         "name": "Placas Lasanha",
         "brand": "Milaneza",
         "ingredients": "• Farinha de milho 55%<br>• Farinha de arroz 45%<br>• Pode conter vestígios de soja",
-        "supermarkets": "• Auchan<br>• Continente<br>• El Corte Inglés"
+        "supermarkets": "• Auchan<br>• Continente<br>• El Corte Inglés",
+        "subcategory": "Massa"
     },
     {
         "id": 6,
@@ -44,7 +49,8 @@
         "name": "Muffins Chocolate",
         "brand": "Museu do pão",
         "ingredients": "• Açúcar<br>• Amido de batata<br>• Ovo inteiro em pó<br>• Xarope de glicose (batata)<br>• Amido modificado<br>• Gordura de coco<br>• Levedante químico (E450 e E500)<br>• Sal<br>• Proteínas de leite<br>• Aromas<br>• Água<br>• Óleo de girassol<br>• Conservantes (E282 e E202)<br>• Isento de glúten e lactose<br>• Contém ovo<br>• Pode conter vestígios de frutos de casca rija e sementes de sésamo",
-        "supermarkets": "• Auchan<br>• Celeiro<br>• Continente<br>• Intermarché"
+        "supermarkets": "• Auchan<br>• Celeiro<br>• Continente<br>• Intermarché",
+        "subcategory": "Bolos"
     },
     {
         "id": 7,
@@ -52,7 +58,8 @@
         "name": "Brownie Mix",
         "brand": "Shine",
         "ingredients": "• Farinha de trigo sarraceno<br>• Áçúcar de coco<br>• Farinha de arroz integral<br>• Farinha de aveia integral (isenta de glúten)<br>• Cacau em pó (10,5%)<br>• Pepitas de chocolate negro [pasta de cacau, açúcar de cana, manteiga de cacau, extrato de baunilha] (10,25%)<br>• Amido de tapioca<br>• Sementes de linhaça moídas<br>• Amido de milho<br>• Levedantes (fosfato monocálcico e bicarbonato de sódio)<br>• Canela em pó<br>• Sal rosa dos himalaias<br>• Ingredientes de agricultura biológica",
-        "supermarkets": "• Auchan<br>• Celeiro<br>• Continente<br>• Pingo Doce"
+        "supermarkets": "• Auchan<br>• Celeiro<br>• Continente<br>• Pingo Doce",
+        "subcategory": "Preparados de bolos e mousses"
     },
     {
         "id": 8,
@@ -60,7 +67,8 @@
         "name": "Esparguete",
         "brand": "Rummo",
         "ingredients": "• Arroz integral (36%)<br>• Milho amarelo (32,5%)<br>• Milho branco (20%)<br>• Arroz (8%)<br>• Fécula de batata (3%)<br>• Emulsionante: mono e diglicéridos de ácidos gordos de origem vegetal<br>• Pode conter vestígios de soja e tremoço",
-        "supermarkets": "• Continente<br>• El Corte Inglés<br>• Spar"
+        "supermarkets": "• Continente<br>• El Corte Inglés<br>• Spar",
+        "subcategory": "Massa"
     },
     {
         "id": 9,
@@ -68,7 +76,8 @@
         "name": "Iogurtes",
         "brand": "Danone",
         "ingredients": "• Leite pasteurizado desnatado<br>• Açúcar líquido (sacarose: 6,8%)<br>• Polpa de morango (6%)<br>• Nata pasteurizada<br>• Amido de arroz<br>• Leite pasteurizado desnatado concentrado<br>• Sólidos lácteos<br>• Açúcar<br>• Aromas naturais<br>• Sumos concentrados de cenoura negra e limão<br>• Fermentos láticos<br>• Vitamina D",
-        "supermarkets": "• Aldi<br>• Auchan<br>• Continente<br>• Froiz<br>• Intermarché<br>• Lidl<br>• Minipreço<br>• Pingo Doce"
+        "supermarkets": "• Aldi<br>• Auchan<br>• Continente<br>• Froiz<br>• Intermarché<br>• Lidl<br>• Minipreço<br>• Pingo Doce",
+        "subcategory": "Iogurtes"
     },
     {
         "id": 10,
@@ -76,7 +85,8 @@
         "name": "Iogurtes Danup",
         "brand": "Danone",
         "ingredients": "• Leite pasteurizado<br>• Soro de lactose concentrada reconstituído<br>• Açúcar<br>• Polpa de morango (1%)<br>• Leite em pó<br>• Aroma de morango<br>• Fermentos láticos ativos<br>• Sumo concentrado de cenoura preta<br>• Pode conter cereais com glúten, frutos de casca rija e sementes de sésamo",
-        "supermarkets": "• Aldi<br>• Auchan<br>• Continente<br>• Intermarché<br>• Minipreço<br>• Pingo Doce"
+        "supermarkets": "• Aldi<br>• Auchan<br>• Continente<br>• Intermarché<br>• Minipreço<br>• Pingo Doce",
+        "subcategory": "Iogurtes"
     },
     {
         "id": 11,
@@ -84,7 +94,8 @@
         "name": "Iogurtes Manga",
         "brand": "Nutregi",
         "ingredients": "Leite pasteurizado desnatado<br>• Leite pasteurizado<br>• Açúcar<br>• Polpa de manga (5%)<br>• Proteínas do leite<br>• Leite em pó magro<br>• Dextrose<br>• Fibra alimentar (inulina)<br>• Aromas<br>• Fermentos láticos<br>• Conservante da fruta (sorbato de potássio)<br>• Corante (beta-caroteno)<br>• Contém leite<br>• Sem lactose",
-        "supermarkets": "• Auchan<br>• Continente<br>• El Corte Inglés<br>• Minipreço<br>• Pingo Doce<br>• Spar"
+        "supermarkets": "• Auchan<br>• Continente<br>• El Corte Inglés<br>• Minipreço<br>• Pingo Doce<br>• Spar",
+        "subcategory": "Iogurtes"
     },
     {
         "id": 12,
@@ -92,6 +103,7 @@
         "name": "Iogurtes",
         "brand": "Mimosa",
         "ingredients": "• Leitelho<br>• Leite pasteurizado desnatado<br>• Açúcar<br>• Leite em pó magro<br>• Fermentos lácteos<br>• Aromas",
-        "supermarkets": "• Aldi<br>• Auchan<br>• Continente<br>• El Corte Inglés<br>• Froiz<br>• Intermarché<br>• Minipreço<br>• Pingo Doce<br>• Spar"
+        "supermarkets": "• Aldi<br>• Auchan<br>• Continente<br>• El Corte Inglés<br>• Froiz<br>• Intermarché<br>• Minipreço<br>• Pingo Doce<br>• Spar",
+        "subcategory": "Iogurtes"
     }
 ]

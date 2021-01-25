@@ -11,7 +11,8 @@ const Shopping: React.FC = () => {
         <AlergHeader 
           headerLeft={""} 
           headerTitle={"Listas de compras"} 
-          headerRight={"headerUser"} />
+          headerRight={"headerUser"}
+          searchedText={""} />
       </IonHeader>
       <IonContent fullscreen className="content">
         <div className="prodListWrapper">

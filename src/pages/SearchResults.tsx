@@ -30,14 +30,42 @@ interface SearchPageProps extends RouteComponentProps<{
 
 class SearchResults extends React.Component<SearchPageProps> {
 
+  searched = "";
+
   state = {
+    allProducts: [],
     searchResultsProducts: []
   }
+
+  updateItems() {
+    let filteredNames = this.state.allProducts.filter((prod: any) => prod.name.toUpperCase().includes(this.props.match.params.searchParams.toUpperCase()));
+    let filteredBrands = this.state.allProducts.filter((prod: any) => prod.brand.toUpperCase().includes(this.props.match.params.searchParams.toUpperCase()));
+    let filteredSubCategories = this.state.allProducts.filter((prod: any) => prod.subcategory.toUpperCase().includes(this.props.match.params.searchParams.toUpperCase()));
+    let filteredResponse = filteredNames.concat(filteredBrands).concat(filteredSubCategories);
+
+    filteredResponse = filteredResponse.filter((item: never, index: number) => {
+      console.log("ola");
+      return filteredResponse.indexOf(item) === index;
+    });
+
+    this.setState({searchResultsProducts: filteredResponse})
+  }
   
+  componentDidUpdate () {
+    if (this.searched !== this.props.match.params.searchParams) {
+      this.searched = this.props.match.params.searchParams;
+      this.setState({searchResultsProducts: []});
+      
+      this.updateItems();
+    }
+  }
+
   componentDidMount () {
+    this.searched = this.props.match.params.searchParams;
+    
     loadData().then((loadDataResponse) => {
-      let filteredResponse = loadDataResponse.filter((prod: any) => prod.name.toUpperCase().includes(this.props.match.params.searchParams.toUpperCase()));
-      this.setState({searchResultsProducts: filteredResponse})
+      this.setState({allProducts: loadDataResponse})
+      this.updateItems();
     }).catch((err) => {
       console.log(err.statusText);
     });
@@ -49,7 +77,20 @@ class SearchResults extends React.Component<SearchPageProps> {
 
   renderInitial () {
     return (
-      <IonSpinner name="crescent" />
+      <IonPage>
+        <IonHeader>
+          <AlergHeader 
+          headerLeft={"headerReturn"} 
+          headerTitle={"headerSearch"} 
+          headerRight={""}
+          searchedText={this.searched} />
+        </IonHeader>
+        <IonContent fullscreen className="content">
+          <div className ="noResults">
+            <span>Não foram encontrados resultados.</span>
+          </div>
+        </IonContent>
+      </IonPage>
     );
   }
 
@@ -61,13 +102,14 @@ class SearchResults extends React.Component<SearchPageProps> {
                   <AlergHeader 
                   headerLeft={"headerReturn"} 
                   headerTitle={"headerSearch"} 
-                  headerRight={""} />
+                  headerRight={""}
+                  searchedText={this.searched} />
               </IonHeader>
               <IonContent fullscreen className="content">
                   <div className="searchResultsWrapper">
-                    {this.state.searchResultsProducts.map( (productInfo) => {
+                    {this.state.searchResultsProducts.map( (productInfo, idx) => {
                       return (
-                        <AlergProductCard product={productInfo} />
+                        <AlergProductCard key={idx} product={productInfo} />
                       ) })}
                   </div>
               </IonContent>
