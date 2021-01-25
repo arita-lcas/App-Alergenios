@@ -105,5 +105,104 @@
         "ingredients": "• Leitelho<br>• Leite pasteurizado desnatado<br>• Açúcar<br>• Leite em pó magro<br>• Fermentos lácteos<br>• Aromas",
         "supermarkets": "• Aldi<br>• Auchan<br>• Continente<br>• El Corte Inglés<br>• Froiz<br>• Intermarché<br>• Minipreço<br>• Pingo Doce<br>• Spar",
         "subcategory": "Iogurtes"
+    },
+    {
+        "id": 13,
+        "img": "/assets/img/item-13.jpg",
+        "name": "Bebida de Coco",
+        "brand": "Continente Equilíbrio",
+        "ingredients": "• Água<br>• Arroz<br>• Leite de coco<br>• Inulina<br>• Sais de cálcio do ácido ortofosfórico<br>• Estabilizadores<br>• Emulsionante (lecitina de girassol)<br>• Sal marinho<br>• Antioxidante<br>• Pode conter vestígios de soja e frutos de casca rija",
+        "supermarkets": "• Continente",
+        "subcategory": "Bebidas vegetais"
+    },
+    {
+        "id": 14,
+        "img": "/assets/img/item-14.jpg",
+        "name": "Bebida de Soja",
+        "brand": "Shoyce",
+        "ingredients": "• Água<br>• Grãos de soja descascados (11%)<br>• Sais de cálcio do ácido cítrico<br>• Reguladores de acidez<br>• Estabilizador (gomagelana)<br>• Vitaminas<br>• Aroma",
+        "supermarkets": "• Aldi<br>• Auchan<br>• Continente<br>• El Corte Inglés<br>• Froiz<br>• Intermarché<br>• Minipreço<br>• Pingo Doce<br>• Spar",
+        "subcategory": "Bebidas vegetais"
+    },
+    {
+        "id": 15,
+        "img": "/assets/img/item-15.jpg",
+        "name": "Leite Magro",
+        "brand": "Gresso",
+        "ingredients": "• Contém leite<br>• Livre de cereais que contêm glúten",
+        "supermarkets": "• Aldi<br>• Auchan<br>• Continente<br>• El Corte Inglés<br>• Froiz<br>• Intermarché<br>• Minipreço<br>• Pingo Doce<br>• Spar",
+        "subcategory": "Leite"
+    },
+    {
+        "id": 16,
+        "img": "/assets/img/item-16.jpg",
+        "name": "Manteiga Magra",
+        "brand": "Matinal",
+        "ingredients": "• Contém leite<br>• Livre de cereais que contêm glúten",
+        "supermarkets": "• Auchan<br>• Continente<br>• Intermarché<br>• Minipreço<br>• Pingo Doce",
+        "subcategory": "Manteigas e cremes vegetais"
+    },
+    {
+        "id": 17,
+        "img": "/assets/img/item-17.jpg",
+        "name": "Creme Soja",
+        "brand": "Alpro",
+        "ingredients": "• Água<br>• Óleos e gorduras vegetais (38%)<br>• Amido modificado<br>• Emulsionantes<br>• Sal (0,2%)<br>• Regulador de acidez (ácido cítrico)<br>• Conservante (sorbato de potássio)<br>• Aroma natural<br>• Vitaminas (A, D)",
+        "supermarkets": "• Auchan<br>• Continente<br>• Intermarché<br>• Minipreço<br>• Pingo Doce",
+        "subcategory": "Manteigas e cremes vegetais"
+    },
+    {
+        "id": 18,
+        "img": "/assets/img/item-18.jpg",
+        "name": "Chantilly",
+        "brand": "Président",
+        "ingredients": "• Nata magra (91%)<br>• Açúcar (8,5%)<br>• Emulsionante: E472b<br>• Estabilizador: E407<br>• Aroma de baunilha<br>• Gás propulsor E942",
+        "supermarkets": "• Auchan<br>• Continente<br>• Intermarché<br>• Minipreço<br>• Pingo Doce",
+        "subcategory": "Natas, bechamel e chantilly"
+    },
+    {
+        "id": 19,
+        "img": "/assets/img/item-19.jpg",
+        "name": "Ovo Líquido",
+        "brand": "Dovo",
+        "ingredients": "• Ovo de galinha<br>• Regulador de acidez (ácido cítrico)<br>• Conservantes (sorbato de potássio e benzoato de sódio)",
+        "supermarkets": "• Auchan<br>• Continente<br>• Intermarché",
+        "subcategory": "Ovos"
+    },
+    {
+        "id": 20,
+        "img": "/assets/img/item-20.jpg",
+        "name": "Queijo Fresco",
+        "brand": "Matinal",
+        "ingredients": "• Leite pasteurizado<br>• Sal<br>• Coalho",
+        "supermarkets": "• Auchan<br>• Continente<br>• Froiz<br>• Intermarché",
+        "subcategory": "Queijos"
+    },
+    {
+        "id": 21,
+        "img": "/assets/img/item-21.jpg",
+        "name": "Queijo Flamengo",
+        "brand": "Agros",
+        "ingredients": "• Leite pasteurizado<br>• Fermentos lácteos<br>• Cloreto de cálcio<br>• Coalho<br>• Sal",
+        "supermarkets": "• Auchan<br>• Continente<br>• Intermarché<br>• Pingo Doce",
+        "subcategory": "Queijos"
+    },
+    {
+        "id": 22,
+        "img": "/assets/img/item-22.jpg",
+        "name": "Pudim Flan",
+        "brand": "Danone",
+        "ingredients": "• Leite parcialmente desnatado<br>• Açúcar<br>• Caramelo (água e açúcar)<br>• Sólidos lácteos<br>• Amido de milho<br>• Leite desnatado em pó<br>• Estabilizador (E 407)<br>• Aroma<br>• Corantes (anato e curcumina)",
+        "supermarkets": "• Auchan<br>• Continente",
+        "subcategory": "Sobremesas refrigeradas"
+    },
+    {
+        "id": 23,
+        "img": "/assets/img/item-23.jpg",
+        "name": "Arroz Doce",
+        "brand": "Continente",
+        "ingredients": "• Leite gordo (67%)<br>• Açúcar<br>• Arroz (9%)<br>• Nata<br>• Aroma natural de canela<br>• Amido de milho<br>• Amido modificado de milho<br>• Aroma de limão<br>• Vanilina<br>• Canela",
+        "supermarkets": "• Continente",
+        "subcategory": "Sobremesas refrigeradas"
     }
 ]

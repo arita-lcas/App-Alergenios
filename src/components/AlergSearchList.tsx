@@ -1,6 +1,6 @@
-import { carSharp } from 'ionicons/icons';
 import React from 'react';
 import './AlergSearchList.css';
+import { withRouter, RouteComponentProps  } from 'react-router-dom';
 
 
 const listArray = [
@@ -101,40 +101,48 @@ const listArray = [
     return;
   }
 
-  // function searchSubCategory (event: any) {
-  //   if (event && event.target) {
-  //     this.props.history.push(`/searchresults/${event.target.value}`);
-  //   }
-  // };
+
+  interface AlergSearchListProps extends RouteComponentProps {
+
+  }
 
 
-const AlergSearchList: React.FC = () => {
+class AlergSearchList extends React.Component<AlergSearchListProps> {
+  searchSubCategory (event: any) {
+    if (event && event.target && event.target.innerText) {
+      this.props.history.push(`/searchresults/${event.target.innerText.substring(2)}`);
+    }
+  };
+
+  render () {
     return (
-        <div className="searchList">
-          {listArray.map( (objectInfo, index) => {
-            return (
-            <div key={index}>
-              <div className="listCard" id={"listCard#"+index} onClick={showSearchDiv}>
-                <span className="listCardTitle" id={"listCardTitle#"+index} key={index}>{objectInfo.title}</span>
-              </div>
-              <a href={"/searchresults/"} className="listLink"><div className="hideListContent" id={"searchDiv#"+index}>
-                {objectInfo.subTitle
-                  ? objectInfo.subTitle.map( (listSubTitle, index2) => {
-                    return (
-                      <span className="listCardSubTitle" key={index2}>• {listSubTitle}</span>
-                    )
-                  } )
-                  : null
-                }
-              </div></a>
+      <div className="searchList">
+        {listArray.map( (objectInfo, index) => {
+          return (
+          <div key={index}>
+            <div className="listCard" id={"listCard#"+index} onClick={showSearchDiv}>
+              <span className="listCardTitle" id={"listCardTitle#"+index} key={index}>{objectInfo.title}</span>
             </div>
-            )
-          } )}
-        </div>
-    );
+            <div className="hideListContent" id={"searchDiv#"+index} onClick={this.searchSubCategory.bind(this)}>
+              {objectInfo.subTitle
+                ? objectInfo.subTitle.map( (listSubTitle, index2) => {
+                  return (
+                    <span className="listCardSubTitle" key={index2}>• {listSubTitle}</span>
+                  )
+                } )
+                : null
+              }
+            </div>
+          </div>
+          )
+        } )}
+      </div>
+  );
+  }
+
 };
 
-export default AlergSearchList;
+export default withRouter(AlergSearchList);
 
 
 
