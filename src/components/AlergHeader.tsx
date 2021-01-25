@@ -16,7 +16,7 @@ class AlergHeader extends React.Component<AlergHeaderProps> {
 
   searchText (event: any) {
     if (event && event.key === "Enter" && event.target && event.target.value !== undefined) {
-      this.props.history.push('/searchresults');
+      this.props.history.push(`/searchresults/${event.target.value}`);
     }
   };
   
@@ -28,7 +28,6 @@ class AlergHeader extends React.Component<AlergHeaderProps> {
           <div className="headerGridCol">
             {this.props.headerLeft === "headerReturn"
               ? <div>
-                  {/* <IonIcon icon={arrowBackOutline} className='headerUserIcon' /> */}
                   <IonBackButton className="backButton" />
                 </div>
               : <div></div>

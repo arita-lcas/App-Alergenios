@@ -2,6 +2,7 @@ import React from 'react';
 import { IonContent, IonHeader, IonPage, IonSpinner } from '@ionic/react';
 import AlergHeader from '../components/AlergHeader';
 import AlergProductCard from '../components/AlergProductCard';
+import { RouteComponentProps } from "react-router-dom";
 import './SearchResults.css';
 
 
@@ -23,51 +24,56 @@ async function loadData() {
   }
 }
 
+interface SearchPageProps extends RouteComponentProps<{
+  searchParams: string;
+}> {}
 
-class SearchResults extends React.Component {
+class SearchResults extends React.Component<SearchPageProps> {
 
-    state = {
-        searchResultsProducts: []
-      }
-      
-      componentDidMount () {
-        loadData().then((loadDataResponse) => {
-          this.setState({searchResultsProducts: loadDataResponse})
-        }).catch((err) => {
-          console.log(err.statusText);
-        });
-      }
-    
-      render () {
-        return this.state.searchResultsProducts.length === 0  ?  this.renderInitial() : this.renderFinal();
-      }
-    
-      renderInitial () {
-        return (
-          <IonSpinner name="crescent" />
-        );
-      }
+  state = {
+    searchResultsProducts: []
+  }
+  
+  componentDidMount () {
+    loadData().then((loadDataResponse) => {
+      let filteredResponse = loadDataResponse.filter((prod: any) => prod.name.toUpperCase().includes(this.props.match.params.searchParams.toUpperCase()));
+      this.setState({searchResultsProducts: filteredResponse})
+    }).catch((err) => {
+      console.log(err.statusText);
+    });
+  }
+
+  render () {
+    return this.state.searchResultsProducts.length === 0  ?  this.renderInitial() : this.renderFinal();
+  }
+
+  renderInitial () {
+    return (
+      <IonSpinner name="crescent" />
+    );
+  }
 
 
-    renderFinal () {
-        return (
-            <IonPage>
-                <IonHeader>
-                    <AlergHeader 
-                    headerLeft={"headerReturn"} 
-                    headerTitle={"headerSearch"} 
-                    headerRight={""} />
-                </IonHeader>
-                <IonContent fullscreen className="content">
-                    <div className="searchResultsWrapper">
-                        <AlergProductCard product={this.state.searchResultsProducts[0]} />
-                        <AlergProductCard product={this.state.searchResultsProducts[1]} />
-                        <AlergProductCard product={this.state.searchResultsProducts[2]} />
-                    </div>
-                </IonContent>
-            </IonPage>
-        );
-    }
+  renderFinal () {
+      return (
+          <IonPage>
+              <IonHeader>
+                  <AlergHeader 
+                  headerLeft={"headerReturn"} 
+                  headerTitle={"headerSearch"} 
+                  headerRight={""} />
+              </IonHeader>
+              <IonContent fullscreen className="content">
+                  <div className="searchResultsWrapper">
+                    {this.state.searchResultsProducts.map( (productInfo) => {
+                      return (
+                        <AlergProductCard product={productInfo} />
+                      ) })}
+                  </div>
+              </IonContent>
+          </IonPage>
+      );
+  }
     
 }
 

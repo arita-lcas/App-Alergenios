@@ -50,7 +50,7 @@ const App: React.FC = () => (
           <Route path="/tab4" component={Favorites} exact={true} />
           <Route path="/tab5" component={Shopping} />
           <Route path="/product/:id" component={Product} />
-          <Route path="/searchresults" component={SearchResults} />
+          <Route path="/searchresults/:searchParams" component={SearchResults} />
           <Route path="/" render={() => <Redirect to="/tab1" />} exact={true} />
         </IonRouterOutlet>
         <IonTabBar slot="bottom" className="menuTabBar">
