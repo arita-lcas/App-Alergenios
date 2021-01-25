@@ -1,0 +1,18 @@
+.profilesPWrapper {
+    width: 76vw;
+    margin: auto;
+    margin-top: 20px;
+}
+
+.profilesGridContainer {
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-gap: 3vw;
+    margin: 20px 0;
+}
+
+.profileContainer {
+    width: 50px;
+    height: 50px;
+    background: grey;
+}

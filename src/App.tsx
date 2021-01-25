@@ -18,6 +18,7 @@ import Favorites from './pages/Favorites';
 import Shopping from './pages/Shopping';
 import Product from './pages/Product';
 import SearchResults from './pages/SearchResults';
+import Profiles from './pages/Profiles';
 import './App.css';
 
 /* Core CSS required for Ionic components to work properly */
@@ -51,6 +52,7 @@ const App: React.FC = () => (
           <Route path="/tab5" component={Shopping} />
           <Route path="/product/:id" component={Product} />
           <Route path="/searchresults/:searchParams" component={SearchResults} />
+          <Route path="/profiles" component={Profiles} />
           <Route path="/" render={() => <Redirect to="/tab1" />} exact={true} />
         </IonRouterOutlet>
         <IonTabBar slot="bottom" className="menuTabBar">

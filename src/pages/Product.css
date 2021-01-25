@@ -71,6 +71,10 @@ div.productPInfo span {
     margin-top: 21px;
 }
 
+.hideIcon {
+    opacity: 0%;
+}
+
 /* Show profile hidden content */
 
 .hideProfileContent {

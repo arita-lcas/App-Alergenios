@@ -91,7 +91,7 @@ popoverStatus: any }> {
               <h1 className="alergTitle">{this.state.product.name}</h1>
               <span>{this.state.product.brand}</span>
               <div className="productPGridContainer">
-                <IonIcon icon={chevronBackOutline} />
+                <IonIcon icon={chevronBackOutline} className="hideIcon" />
                 <div className="productPImg"><IonImg src={process.env.PUBLIC_URL + this.state.product.img} /></div>
                 <IonIcon icon={chevronForwardOutline} />
               </div>

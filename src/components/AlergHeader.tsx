@@ -20,6 +20,12 @@ class AlergHeader extends React.Component<AlergHeaderProps> {
       this.props.history.push(`/searchresults/${event.target.value}`);
     }
   };
+
+  openProfilesPage (event: any) {
+    if (event && event.target) {
+      this.props.history.push(`/profiles`);
+    }
+  };
   
   render () {
     return (
@@ -49,7 +55,7 @@ class AlergHeader extends React.Component<AlergHeaderProps> {
 
           <div className="headerGridCol"> 
             {this.props.headerRight === "headerUser" 
-              ? <div >
+              ? <div onClick={this.openProfilesPage.bind(this)}>
                   <IonIcon icon={personCircleOutline} className='headerUserIcon' />
                   <br />
                   <span className="headerUserText">Marta</span>
