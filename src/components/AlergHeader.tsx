@@ -81,7 +81,7 @@ class AlergHeader extends React.Component<AlergHeaderProps> {
             {this.props.headerRight === "headerUser" 
               ? <div className="headerUser" onClick={this.openProfilesPage.bind(this)}>
                   <IonIcon icon={personCircleOutline} className='headerUserIcon' />
-                  <span className="headerUserText">Marta</span>
+                  <span className="headerUserText" id="headerUsername">Sofia</span>
                 </div>
               : <div> 
                 {this.props.headerRight === "headerEdit" 

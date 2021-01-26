@@ -5,20 +5,47 @@ import AlergHeader from '../components/AlergHeader';
 import './Profiles.css';
 
 
- function activateMarta (event:any) {
+//  function activateMarta (event:any) {
 
-   if (event && event.target) {
-     let element2 = document.getElementById('martaBorder');
-  
-     if (element2 && element2.childElementCount > 0) {
-       element2.classList.toggle('hideProfileBorder');
-     }
+//    if (event && event.target) {
+//     debugger;
+//     let getMartaBorder = document.getElementById('martaBorder');
+//     let getSofiaBorder = document.getElementById('sofiaBorder');
+//     let getUsername = document.getElementById('headerUsername');
+    
+//     if (getMartaBorder && getSofiaBorder && getUsername) {
+//       getMartaBorder.classList.toggle('hideProfileBorder');
+//       getSofiaBorder.classList.toggle('hideProfileBorder');
+//       getUsername.innerHTML = 'Marta';
+//     }
+//    }
+
+//    return;
+//  }
+
+function activateMarta (event:any, teste: any) {
+
+  if (event && event.target) {
+   let getMartaBorder = document.getElementById('martaBorder');
+   let getSofiaBorder = document.getElementById('sofiaBorder');
+   let getUsername = document.getElementById('headerUsername');
+   
+   if (getMartaBorder && getSofiaBorder && getUsername) {
+     getMartaBorder.classList.toggle('hideProfileBorder');
+     getSofiaBorder.classList.toggle('hideProfileBorder');
+
+      if (teste == 'marta') {
+        getUsername.innerHTML = 'Marta';  
+      } else {
+        getUsername.innerHTML = 'Sofia'; 
+      }
    }
+  }
 
-   return;
- }
+  return;
+}
 
- 
+
 const Profiles: React.FC = () => {
   return (
     <IonPage>
@@ -33,7 +60,7 @@ const Profiles: React.FC = () => {
           <div className="profilesPWrapper">
             <span>Selecione o perfil que quiser ativar</span>
             <div className="profilesGridContainer">
-              <div className="profileContainer" onClick={activateMarta}>
+              <div className="profileContainer" onClick={(event) => activateMarta(event,'marta')}>
                 <div className="profileBorder hideProfileBorder" id="martaBorder"></div>
                 <IonIcon icon={personCircle} className='profilesUserIcon' />
                 <div className="profileNameContainer">
@@ -41,8 +68,8 @@ const Profiles: React.FC = () => {
                   <IonIcon icon={pencilSharp} className='profilesEdit' />
                 </div>
               </div>
-              <div className="profileContainer">
-                <div className="profileBorder"></div>
+              <div className="profileContainer" onClick={(event) => activateMarta(event,'sofia')}>
+                <div className="profileBorder" id="sofiaBorder"></div>
                 <IonIcon icon={personCircle} className='profilesUserIcon' />
                 <div className="profileNameContainer">
                   <span>Sofia</span>
