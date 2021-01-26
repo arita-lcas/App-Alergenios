@@ -1,21 +1,34 @@
 import React from 'react';
-import './AlergProductCard.css';
-import { IonImg, IonIcon } from '@ionic/react';
+import { IonIcon, IonImg } from '@ionic/react';
 import { ellipsisVertical } from 'ionicons/icons';
+import './AlergProductCard.css';
+import { withRouter, RouteComponentProps  } from 'react-router-dom';
 
 
 
-const AlergProductCard: React.FC<{ product: { id: number, img: string, name: string, brand: string } }> = props => {
+interface AlergProductCardProps extends RouteComponentProps {
+  product: { id: number, img: string, name: string, brand: string }
+}
+
+class AlergProductCard extends React.Component<AlergProductCardProps> {
+  openProductPage (event: any) {
+    if (event && event.target) {
+      this.props.history.push(`/tab3/product/${this.props.product.id}`);
+    }
+  };
+
+  render () {
     return (
-        <a href={"/product/"+props.product.id}><div className="productCard">
-            <div className="productCardImg"><IonImg src={process.env.PUBLIC_URL + props.product.img} /></div>
-            <div className="productDescription">
-                <p className="productCardName">{props.product.name}</p>
-                <p className="productCardBrand">{props.product.brand}</p>
-            </div>
-            <IonIcon icon={ellipsisVertical} className="productContextMenu" />
-        </div></a>
+      <div className="productCard" onClick={this.openProductPage.bind(this)}>
+        <div className="productCardImg"><IonImg src={process.env.PUBLIC_URL + this.props.product.img} /></div>
+        <div className="productDescription">
+            <p className="productCardName">{this.props.product.name}</p>
+            <p className="productCardBrand">{this.props.product.brand}</p>
+        </div>
+        <IonIcon icon={ellipsisVertical} className="productContextMenu" />
+      </div>
     );
-};
+  }
+}
 
-export default AlergProductCard;
+export default withRouter(AlergProductCard);

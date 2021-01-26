@@ -44,7 +44,7 @@
 
 .headerSearch {
     align-items: center;
-    margin-top: 7.5px;
+    /* margin-top: 7.5px; */
 }
 
 .headerSearchbar {
@@ -65,5 +65,13 @@
 }
 
 .backButton {
-    display: block;
+    --background: none;
+    --box-shadow: none;
+    /* position: relative;
+    top: 4px; */
+}
+
+.backButtonIcon {
+    color: var(--alerg-color-dark-green);
+    font-size: 190%;
 }

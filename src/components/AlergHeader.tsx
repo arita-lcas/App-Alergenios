@@ -1,6 +1,6 @@
 import React from 'react';
-import { IonToolbar, IonTitle, IonIcon, IonSearchbar, IonBackButton } from '@ionic/react';
-import { personCircleOutline, pencilOutline } from 'ionicons/icons';
+import { IonToolbar, IonTitle, IonIcon, IonSearchbar, IonButton } from '@ionic/react';
+import { personCircleOutline, pencilOutline, arrowBackOutline } from 'ionicons/icons';
 import './AlergHeader.css';
 import { withRouter, RouteComponentProps  } from 'react-router-dom';
 
@@ -24,18 +24,42 @@ class AlergHeader extends React.Component<AlergHeaderProps> {
   openProfilesPage (event: any) {
     if (event && event.target) {
       this.props.history.push(`/profiles`);
+
+      let element1 = document.getElementById('menuTabBar');
+    
+      if (element1 && element1.childElementCount > 0) {
+        element1.classList.toggle('hideMenuTabBar');
+      }
     }
+
+    return;
   };
+
+  goBackButton (event:any) {
+    this.props.history.goBack();
+
+    if (event && event.target && this.props.history.location.pathname === '/profiles') {
+      let element2 = document.getElementById('menuTabBar');
+    
+      if (element2 && element2.childElementCount > 0) {
+        element2.classList.toggle('hideMenuTabBar');
+      }
+    }
+
+    return;
+  }
   
   render () {
     return (
       <IonToolbar className="headerToolbar">
         <div className="headerGridContainer">
           
-          <div className="headerGridCol">
+          <div className="headerGridCol" >
             {this.props.headerLeft === "headerReturn"
               ? <div>
-                  <IonBackButton className="backButton" />
+                  <IonButton className="backButton" onClick={this.goBackButton.bind(this)}>
+                    <IonIcon icon={arrowBackOutline} className="backButtonIcon" />
+                  </IonButton>
                 </div>
               : <div></div>
             }

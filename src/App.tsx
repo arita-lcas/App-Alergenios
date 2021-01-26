@@ -50,12 +50,12 @@ const App: React.FC = () => (
           <Route path="/tab3" component={Search} exact={true} />
           <Route path="/tab4" component={Favorites} exact={true} />
           <Route path="/tab5" component={Shopping} />
-          <Route path="/product/:id" component={Product} />
+          <Route path="/tab3/product/:id" component={Product} />
           <Route path="/tab3/searchresults/:searchParams" component={SearchResults} />
           <Route path="/profiles" component={Profiles} />
           <Route path="/" render={() => <Redirect to="/tab1" />} exact={true} />
         </IonRouterOutlet>
-        <IonTabBar slot="bottom" className="menuTabBar">
+        <IonTabBar slot="bottom" className="menuTabBar" id="menuTabBar">
           <IonTabButton tab="tab1" href="/tab1" className="menuButton">
             <IonIcon icon={homeOutline} />
             <IonLabel>Sugestões</IonLabel>
