@@ -1,6 +1,6 @@
 import React from 'react';
 import { IonToolbar, IonTitle, IonIcon, IonSearchbar, IonBackButton } from '@ionic/react';
-import { personCircleOutline, arrowBackOutline, pencilOutline } from 'ionicons/icons';
+import { personCircleOutline, pencilOutline } from 'ionicons/icons';
 import './AlergHeader.css';
 import { withRouter, RouteComponentProps  } from 'react-router-dom';
 
@@ -17,7 +17,7 @@ class AlergHeader extends React.Component<AlergHeaderProps> {
 
   searchText (event: any) {
     if (event && event.key === "Enter" && event.target && event.target.value) {
-      this.props.history.push(`/searchresults/${event.target.value}`);
+      this.props.history.push(`/tab3/searchresults/${event.target.value}`);
     }
   };
 
@@ -48,16 +48,15 @@ class AlergHeader extends React.Component<AlergHeaderProps> {
                   <hr className="searchLine"></hr>
                 </div>
               : <div>
-                  <IonTitle className="headerTitle">{this.props.headerTitle}</IonTitle>
+                  <span className="headerTitle">{this.props.headerTitle}</span>
                 </div>
             }
           </div>
 
           <div className="headerGridCol"> 
             {this.props.headerRight === "headerUser" 
-              ? <div onClick={this.openProfilesPage.bind(this)}>
+              ? <div className="headerUser" onClick={this.openProfilesPage.bind(this)}>
                   <IonIcon icon={personCircleOutline} className='headerUserIcon' />
-                  <br />
                   <span className="headerUserText">Marta</span>
                 </div>
               : <div> 

@@ -1,5 +1,6 @@
 import React from 'react';
-import { IonPage, IonHeader, IonContent } from '@ionic/react';
+import { IonPage, IonHeader, IonContent, IonIcon } from '@ionic/react';
+import { personCircleOutline } from 'ionicons/icons';
 import AlergHeader from '../components/AlergHeader';
 import './Profiles.css';
 
@@ -17,7 +18,9 @@ const Profiles: React.FC = () => {
           <div className="profilesPWrapper">
             <span>Selecione o perfil que quiser ativar</span>
             <div className="profilesGridContainer">
-              <div className="profileContainer"></div>
+              <div className="profileContainer">
+                <IonIcon icon={personCircleOutline} className='profilesUserIcon' />
+              </div>
               <div className="profileContainer"></div>
               <div className="profileContainer"></div>
             </div>

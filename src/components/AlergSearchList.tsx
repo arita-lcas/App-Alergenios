@@ -110,7 +110,7 @@ const listArray = [
 class AlergSearchList extends React.Component<AlergSearchListProps> {
   searchSubCategory (event: any) {
     if (event && event.target && event.target.innerText) {
-      this.props.history.push(`/searchresults/${event.target.innerText.substring(2)}`);
+      this.props.history.push(`/tab3/searchresults/${event.target.innerText.substring(2)}`);
     }
   };
 

@@ -4,12 +4,8 @@
 
 .headerGridContainer {
     display: grid;
-    grid-template-columns: 20% auto 20%;
+    grid-template-columns: 17% 66% 17%;
     
-}
-
-.headerTitle {
-    text-align: center;
 }
 
 .headerGridCol {
@@ -18,17 +14,37 @@
     margin: auto;
 }
 
+.headerTitle {
+    text-align: center;
+    position: relative;
+    top: 9.5px;
+    font-family: var(--alerg-font-family);
+    font-weight: 600;
+    font-size: 24px;
+    color: var(--alerg-color-dark-green);
+}
+
 .headerUserIcon {
     font-size: 170%;
 }
 
+.headerUser {
+    width: 90%;
+    position: relative;
+    top: -2px;
+    margin-top: 12px;
+}
+
 .headerUserText {
-    margin: 0;
     font-family: var(--alerg-font-family);
+    font-size: 18.5px;
+    position: relative;
+    top: -7px;
 }
 
 .headerSearch {
     align-items: center;
+    margin-top: 7.5px;
 }
 
 .headerSearchbar {
