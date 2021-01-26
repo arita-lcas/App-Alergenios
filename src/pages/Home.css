@@ -18,3 +18,11 @@ div.homeWrapper h1 {
     margin: 0;
     z-index: 2;
 }
+
+.contentSpinner {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+}

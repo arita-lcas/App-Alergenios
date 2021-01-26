@@ -4,11 +4,11 @@ import AlergHeader from '../components/AlergHeader';
 import AlergHomeGrid from '../components/AlergHomeGrid';
 import './Home.css';
 
-// function sleep(ms : number) { return new Promise(resolve => setTimeout(resolve, ms)); }
+ function sleep(ms : number) { return new Promise(resolve => setTimeout(resolve, ms)); }
 
 
 async function loadData() {
-  // await sleep(500);
+   await sleep(5000);
   let response = await fetch(process.env.PUBLIC_URL + 'data/sugestions.json' ,{
         headers : { 
         'Content-Type': 'application/json',
@@ -42,7 +42,20 @@ class Home extends React.Component {
 
   renderInitial () {
     return (
-      <IonSpinner name="crescent" />
+      <IonPage>
+        <IonHeader>
+          <AlergHeader 
+              headerLeft={""} 
+              headerTitle={""} 
+              headerRight={"headerUser"}
+              searchedText={""} />
+        </IonHeader>
+        <IonContent slot="fixed" className="content">
+          <div className="contentSpinner">
+            <IonSpinner name="crescent" />
+          </div>
+        </IonContent>
+      </IonPage>
     );
   }
 
