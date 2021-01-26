@@ -10,6 +10,8 @@
     display: flow-root;
     position: relative;
     top: 4vh;
+    width: 87.5vw;
+    margin: auto;
 }
 
 div.homeWrapper h1 {

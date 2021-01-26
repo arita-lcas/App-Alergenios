@@ -4,11 +4,11 @@ import AlergHeader from '../components/AlergHeader';
 import AlergHomeGrid from '../components/AlergHomeGrid';
 import './Home.css';
 
- function sleep(ms : number) { return new Promise(resolve => setTimeout(resolve, ms)); }
+// function sleep(ms : number) { return new Promise(resolve => setTimeout(resolve, ms)); }
 
 
 async function loadData() {
-   await sleep(5000);
+  // await sleep(5000);
   let response = await fetch(process.env.PUBLIC_URL + 'data/sugestions.json' ,{
         headers : { 
         'Content-Type': 'application/json',

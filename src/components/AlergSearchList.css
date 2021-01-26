@@ -1,9 +1,9 @@
 .searchList {
-    padding: 4.5vh 0;
+    padding: 20px 0 30px 0;
 }
 
 .listCard {
-    width: 298px;
+    width: 82.5vw;
     height: 35px;
     background-color: white;
     border: 1px solid var(--alerg-color-dark-green);
@@ -44,7 +44,7 @@
     border-color: var(--alerg-color-dark-green);
     border-radius: 0 0 5px 5px;
     margin: 0 auto;
-    width: 298px;
+    width: 82.5vw;
     height: auto;
     max-height: 0;
     transition: max-height 0.5s ease-in-out, border 0.1s ease;
@@ -59,7 +59,7 @@
     border-radius: 0 0 5px 5px;
     border-color: var(--alerg-color-dark-green);
     margin: 0 auto;
-    width: 298px;
+    width: 82.5vw;
     max-height: 450px;
     display: grid;
 }
