@@ -5,24 +5,6 @@ import AlergHeader from '../components/AlergHeader';
 import './Profiles.css';
 
 
-//  function activateMarta (event:any) {
-
-//    if (event && event.target) {
-//     debugger;
-//     let getMartaBorder = document.getElementById('martaBorder');
-//     let getSofiaBorder = document.getElementById('sofiaBorder');
-//     let getUsername = document.getElementById('headerUsername');
-    
-//     if (getMartaBorder && getSofiaBorder && getUsername) {
-//       getMartaBorder.classList.toggle('hideProfileBorder');
-//       getSofiaBorder.classList.toggle('hideProfileBorder');
-//       getUsername.innerHTML = 'Marta';
-//     }
-//    }
-
-//    return;
-//  }
-
 function activateMarta (event:any, teste: any) {
 
   if (event && event.target) {
@@ -83,7 +65,11 @@ const Profiles: React.FC = () => {
                 </div>
               </div>
             </div>
-            <span>Alterar idioma</span>
+            <div className="changeLanguageWrapper">
+              <span>Alterar idioma</span>
+              <span className="language">Português</span>
+            </div>
+            <hr className="profilesLine" />
           </div>
         </IonContent>
     </IonPage>

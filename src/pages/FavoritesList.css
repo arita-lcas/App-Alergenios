@@ -1,0 +1,10 @@
+.favoritesListWrapper {
+    height: 111px;
+    width: 82.5vw;
+    background: white;
+    border: 1px solid var(--alerg-color-dark-green);
+    border-radius: 5px;
+    margin: auto;
+    margin-top: 25px;
+}
+

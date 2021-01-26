@@ -54,3 +54,18 @@
 .hideProfileBorder {
     display: none;
 }
+
+.changeLanguageWrapper {
+    display: flex;
+    justify-content: space-between;
+}
+
+.language {
+    font-weight: 300;
+}
+
+.profilesLine {
+    border-bottom: 1.5px solid var(--alerg-color-dark-green);
+    margin: 3px;
+    width: 100%;
+}

@@ -13,7 +13,8 @@ interface AlergProductCardProps extends RouteComponentProps {
 class AlergProductCard extends React.Component<AlergProductCardProps> {
   openProductPage (event: any) {
     if (event && event.target) {
-      this.props.history.push(`/tab3/product/${this.props.product.id}`);
+      let routePathName = this.props.history.location.pathname.split('/')[1];
+      this.props.history.push(`/${routePathName}/product/${this.props.product.id}`);
     }
   };
 
