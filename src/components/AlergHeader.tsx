@@ -1,6 +1,6 @@
 import React from 'react';
 import { IonToolbar, IonTitle, IonIcon, IonSearchbar, IonButton } from '@ionic/react';
-import { personCircleOutline, pencilOutline, arrowBackOutline } from 'ionicons/icons';
+import { personCircleOutline, pencilSharp, arrowBackOutline } from 'ionicons/icons';
 import './AlergHeader.css';
 import { withRouter, RouteComponentProps  } from 'react-router-dom';
 
@@ -86,7 +86,7 @@ class AlergHeader extends React.Component<AlergHeaderProps> {
               : <div> 
                 {this.props.headerRight === "headerEdit" 
                   ? <div>
-                      <IonIcon icon={pencilOutline} className='headerUserIcon' />
+                      <IonIcon icon={pencilSharp} className='headerUserIcon' />
                     </div>
                   : <div></div>
                 }
