@@ -1,10 +1,11 @@
 import React, { useState } from 'react';
-import { IonIcon, IonAlert } from '@ionic/react';
+import { IonIcon, IonAlert, IonToast } from '@ionic/react';
 import { starOutline } from 'ionicons/icons';
 import './AlergFavoritesPopover.css';
 
 const FavoritesPopover: React.FC = () => {
     const [showAlert1, setShowAlert1] = useState(false);
+    const [showToast1, setShowToast1] = useState(false);
 
   return (
     <>
@@ -39,11 +40,24 @@ const FavoritesPopover: React.FC = () => {
               ]}
             buttons={[{
                   text: 'Guardar',
-                  cssClass: 'favoritesPopoverButton'
+                  cssClass: 'favoritesPopoverButton',
+                  handler: () => {setShowToast1(true)}
             }]}
         />
 
-    
+        <IonToast
+          isOpen={showToast1}
+          onDidDismiss={() => setShowToast1(false)}
+          message='O produto foi adicionado à lista "Favoritos".'
+          buttons={[
+            {
+              text: 'Ok',
+              role: 'cancel'
+            }
+          ]}
+          cssClass="favoritesToast"
+          duration={2000}
+        />
 
     </>
   );

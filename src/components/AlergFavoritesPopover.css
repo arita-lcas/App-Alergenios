@@ -19,3 +19,13 @@
     font-size: 18px;
     font-weight: 600;
 }
+
+.favoritesToast {
+    --background: var(--alerg-color-background);
+    --color: var(--alerg-color-medium-green);
+    font-family: var(--alerg-font-family);
+    font-size: 18.5px;
+    --height: 70.5px;
+    --button-color: pink !important;
+    width: 100%;
+}

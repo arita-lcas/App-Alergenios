@@ -38,9 +38,9 @@ class SearchResults extends React.Component<SearchPageProps> {
   }
 
   updateItems() {
-    let filteredNames = this.state.allProducts.filter((prod: any) => prod.name.toUpperCase().includes(this.props.match.params.searchParams.toUpperCase()));
-    let filteredBrands = this.state.allProducts.filter((prod: any) => prod.brand.toUpperCase().includes(this.props.match.params.searchParams.toUpperCase()));
-    let filteredSubCategories = this.state.allProducts.filter((prod: any) => prod.subcategory.toUpperCase().includes(this.props.match.params.searchParams.toUpperCase()));
+    let filteredNames = this.state.allProducts.filter((prod: any) => prod.name.toUpperCase().normalize('NFD').replace(/[\u0300-\u036f]/g, "").includes(this.props.match.params.searchParams.toUpperCase().normalize('NFD').replace(/[\u0300-\u036f]/g, "")));
+    let filteredBrands = this.state.allProducts.filter((prod: any) => prod.brand.toUpperCase().normalize('NFD').replace(/[\u0300-\u036f]/g, "").includes(this.props.match.params.searchParams.toUpperCase().normalize('NFD').replace(/[\u0300-\u036f]/g, "")));
+    let filteredSubCategories = this.state.allProducts.filter((prod: any) => prod.subcategory.toUpperCase().normalize('NFD').replace(/[\u0300-\u036f]/g, "").includes(this.props.match.params.searchParams.toUpperCase().normalize('NFD').replace(/[\u0300-\u036f]/g, "")));
     let filteredResponse = filteredNames.concat(filteredBrands).concat(filteredSubCategories);
 
     filteredResponse = filteredResponse.filter((item: never, index: number) => {

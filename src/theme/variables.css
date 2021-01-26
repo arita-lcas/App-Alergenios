@@ -22,6 +22,7 @@ http://ionicframework.com/docs/theming/ */
   --ion-text-color: #608780;
   --ion-color-step-850: #608780;
   --ion-color-step-550: #608780;
+  --ion-color-step-100: #6ba395;
 
   /** primary **/
   --ion-color-primary: #3880ff;
